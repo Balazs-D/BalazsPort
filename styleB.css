@@ -12,12 +12,6 @@ body {
   position: relative;
 }
 
-p {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bold;
-  color: #5107F2;
-}
-
 #main-left {
   width: 40vw;
   height: 52vw;
@@ -25,6 +19,13 @@ p {
   right: 60%;
   top: 0%;
   z-index: 100;
+}
+#main-left .pic {
+  width: 30vw;
+  height: 30vw;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #main-left nav {
   width: 40vw;
@@ -95,52 +96,99 @@ p {
   text-decoration: none;
   color: #D6F204;
   font-size: 3vw;
-  font-family: "Kite One", sans-serif;
+  font-family: "Six Caps", sans-serif;
 }
 
 #main-right {
   width: 60vw;
-  overflow: scroll;
   position: absolute;
-  z-index: 100;
+  display: flex;
+  z-index: 1000;
   right: 0%;
-  background-color: #D6F204;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Six Caps", sans-serif;
+  background: linear-gradient(orange, pink);
 }
 #main-right #titel-block {
   height: 52vw;
   width: 60vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  background-color: #7C07F2;
+  display: block;
 }
 #main-right .sub-block {
   width: 60vw;
-  height: 32vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(#D6F204, #22D8B7);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  z-index: 110;
 }
-#main-right .block:nth-child(even) {
+#main-right .item {
+  font-size: 2vw;
+  font-family: "Raleway", sans-serif;
+  color: #5107F2;
+  border: 4px solid #22D8B7;
+  padding: 3vw;
+  width: 60%;
+  position: relative;
+  margin: 2.5vw 0vw;
+  z-index: 105;
+}
+#main-right .starter {
+  position: absolute;
+  z-index: 100;
+  bottom: 90%;
+  right: 88%;
+  font-size: 2.5vw;
   background-color: #22D8B7;
+  padding: 0.4vw;
+  width: 6vw;
 }
 #main-right h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-transform: uppercase;
-  color: #AB04F2;
-  font-family: "Fjalla One", sans-serif;
+  color: #22D8B7;
+  font-size: 2vw;
+  font-family: "Raleway", sans-serif;
+  background-color: #7C07F2;
   font-weight: bold;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  border-bottom: 1px solid #22D8B7;
 }
 #main-right h1 :nth-child(even) {
-  color: #7C07F2;
+  color: #D6F204;
+  background-color: #22D8B7;
+  width: 40vw;
+  padding: 0vw 0vw;
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 1vw 0vw;
+}
+#main-right h1 :nth-last-child(1) {
+  width: 10%;
 }
 
 /*# sourceMappingURL=styleB.css.map */

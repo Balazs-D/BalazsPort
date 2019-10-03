@@ -41,9 +41,9 @@
     background-color: #D6F204;
 }
 
-@mixin font-style-a {
-    font-family: 'Fjalla One', sans-serif;
-}
+
+
+
 
 // ==== SAVED CLASSES
 @mixin center-flex-column {
@@ -53,16 +53,21 @@
     justify-content: center;
 }
 
+@mixin start-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
 // ==== TEXT CLASSES
 
 
-@mixin h1-class {
 
-}
 
 @mixin p-text {
     font-size: 2vw;
-    @include font-color-three;
+    font-family: 'Raleway', sans-serif;
 
 }
 
@@ -72,12 +77,14 @@
 }
 
 @mixin c-text {
-    font-family: 'Kite One', sans-serif;
+    font-family: 'Six Caps', sans-serif;
 }
 
 @mixin c-text-two {
     font-family: 'Lexend Peta', sans-serif;
 }
+
+
 
 
 
@@ -98,10 +105,7 @@ body {
 
 }
 
-p {
-    @include m-text;
-    @include font-color-three;
-}
+
 
 
 // ====== Left Panel 
@@ -113,6 +117,16 @@ p {
     top: 0%;
     z-index: 100;
 
+    .pic {
+        // background-image: url("balazs-pic.jpg");
+        width: 30vw;
+        height: 30vw;
+        background-blend-mode: multiply;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+
+    }
 
 
 
@@ -134,6 +148,7 @@ p {
         transition: all .3s ease-in-out;
         // transform: skewX(19deg);
         transform: rotate(-25deg);
+
 
         &:hover {
             right: 0%;
@@ -187,7 +202,7 @@ p {
 
             z-index: 104;
             transform: rotate(25deg);
-            @include m-text();
+            @include m-text;
             @include font-color-two;
             position: absolute;
             bottom: 9.5%;
@@ -234,58 +249,116 @@ p {
 
             }
         }
-    }
+    }}
 
-}
+
 
 // ==== Right Panel
 
 #main-right {
     width: 60vw;
-    // height: 52vw;
-    overflow: scroll;
-    position: absolute;
-    z-index: 100;
-    right: 0%;
-    @include color-five;
-    @include center-flex-column;
-    @include font-style-a;
 
+    // height: 52vw;
+    // overflow: scroll;
+    position: absolute;
+    display: flex;
+    
+    z-index: 1000;
+    right: 0%;
+    // @include color-five;
+    @include center-flex-column;
+    @include c-text;
+    background: linear-gradient(orange, pink);
+
+// .opener {
+//     height: 52vw;
+//     width: 60vw;
+// }
 
     #titel-block {
         height: 52vw;
         width: 60vw;
-        @include center-flex-column;
+        @include start-flex-column;
+        @include color-two;
+        display: block;
+        
+
 
     }
 
     .sub-block {
         width: 60vw;
-        height: 32vw;
+        height: 100%;
         @include center-flex-column;
+        background-image: linear-gradient(#D6F204, #22D8B7);        
+        @include start-flex-column;
+        overflow: scroll;
+        @include center-flex-column;
+        // position: relative;
+        padding-top: 5%;
+        z-index: 110;
+        
+
+       
 
     }
 
-    .block:nth-child(even) {
+    .item {
+        // @include color-five;
+        @include p-text;
+        @include font-color-three;
+        border: 4px solid #22D8B7;
+        padding: 3vw;
+        width: 60%;
+        position: relative;
+        
 
-@include color-four;    
-}
+        margin: 2.5vw 0vw;
+        z-index: 105;
+    }
 
-
+    .starter {
+        position: absolute;
+        z-index: 100;
+        bottom: 90%;
+        right: 88%;
+        font-size: 2.5vw;
+        @include color-four;
+        padding: 0.4vw;
+        width: 6vw;
+        
+        
+    }
 
     h1 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         text-transform: uppercase;
-        @include font-color-one;
-        @include font-style-a;
+        @include font-color-four;
+        @include p-text;
+        @include color-two;
         font-weight: bold;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        border-bottom: 1px solid #22D8B7;
+
+
 
         :nth-child(even) {
-            @include font-color-two;
+            @include font-color-five;
+            @include color-four;
+            width: 40vw;
+            padding: 0vw 0vw;
+            font-size: 3vw;
+            font-weight: bold;
+            margin: 1vw 0vw;
+           
         }
 
-
-    }
+        :nth-last-child(1) {
+                width: 10%;            
+        }
+        }
 }
