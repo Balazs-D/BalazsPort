@@ -193,53 +193,66 @@ nav ul {
   box-shadow: inset 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75), 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
   z-index: 92;
 }
-nav ul li {
+nav ul .cont-popup {
+  background: #E7DA3E;
+  border: 0.09vw solid #000077;
+  height: 10vw;
+  width: 14vw;
+  position: absolute;
+  bottom: -160%;
+  left: -20%;
+  z-index: 95;
+  box-shadow: 0.2vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: john-fat-joe;
+  text-transform: uppercase;
+}
+nav ul .cont-popup .a-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3.1vw 0.5vw 0vw 0.5vw;
+  flex-basis: 1;
+  padding: 0.3vw;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.7vw;
+  background: #FF8500;
+  border: 0.09vw solid #000077;
+  border-radius: 6%;
+  box-shadow: 0.1vw 0.15vw 0.2vw rgba(65, 55, 114, 0.75);
+}
+nav ul .cont-popup .con-i {
+  font-size: 1.7vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #E7DA3E;
+  border: 0.09vw solid #000077;
+  border-radius: 50%;
+  width: 3.8vw;
+  height: 3.8vw;
+  margin-bottom: 0.3vw;
+  padding-top: 1.1vw;
+  box-shadow: 0.1vw 0.1vw 0.3vw rgba(65, 55, 114, 0.75);
+}
+nav ul .cont-popup .con-i:hover {
+  background: #5F6BF0;
+  border: 0.09vw solid #000077;
+  color: #E7DA3E;
+  font-size: 1.7vw;
+  box-shadow: 0.05vw 0.05vw 0.2vw rgba(65, 55, 114, 0.75);
+}
+nav li {
   list-style: none;
   drop-shadow: 0.6vw 0.6vw 0.4vw rgba(65, 55, 114, 0.75);
-}
-nav ul li .fa-address-card {
-  position: absolute;
-  z-index: 97;
-  font-size: 1.5vw;
-  bottom: 20%;
-  background: #E7DA3E;
-  padding: 0.7vw;
-  border-radius: 50%;
-  box-shadow: 0.1vw 0.1vw 0.2vw rgba(65, 55, 114, 0.75);
-  border: 0.09vw solid #000077;
-  opacity: 0;
-  left: 85%;
-}
-nav ul li .fa-envelope {
-  position: absolute;
-  z-index: 97;
-  font-size: 1.5vw;
-  bottom: 20%;
-  background: #E7DA3E;
-  padding: 0.7vw;
-  border-radius: 50%;
-  box-shadow: 0.1vw 0.1vw 0.2vw rgba(65, 55, 114, 0.75);
-  border: 0.09vw solid #000077;
-  opacity: 0;
-  left: 68%;
-}
-nav ul li .fa-linkedin {
-  position: absolute;
-  z-index: 97;
-  font-size: 1.5vw;
-  bottom: 20%;
-  background: #E7DA3E;
-  padding: 0.7vw;
-  border-radius: 50%;
-  box-shadow: 0.1vw 0.1vw 0.2vw rgba(65, 55, 114, 0.75);
-  border: 0.09vw solid #000077;
-  opacity: 0;
-  left: 52%;
-}
-nav ul li .con-i:hover {
-  background: #624B9D;
-  border: #E7DA3E;
-  color: #85F2EF;
 }
 nav .button {
   font-family: john-reg-joe;
@@ -261,28 +274,28 @@ nav .button:hover {
 nav .cont-about {
   position: absolute;
   left: 18%;
-  top: 17%;
+  top: 7%;
   transform: rotateY(10deg);
   z-index: 95;
 }
 nav .cont-work {
   position: absolute;
   right: 10%;
-  top: 37%;
+  top: 27%;
   transform: rotateY(12deg);
   z-index: 96;
 }
 nav .cont-skills {
   position: absolute;
   left: 20%;
-  top: 57%;
+  top: 47%;
   transform: rotateX(6deg) rotateY(16deg);
   z-index: 97;
 }
 nav .cont-contact {
   position: absolute;
-  left: 4%;
-  top: 75%;
+  left: 0%;
+  top: 65%;
   transform: rotateX(8deg) rotateY(-2deg);
   z-index: 96;
   font-size: 0.5vw;
@@ -290,10 +303,6 @@ nav .cont-contact {
 nav .button-contact {
   width: 10vw;
   transition: width 0.2s ease-in-out;
-  justify-content: flex-start;
-}
-nav .button-contact:hover {
-  width: 20vw;
   justify-content: flex-start;
 }
 
@@ -367,6 +376,7 @@ nav .button-contact:hover {
   padding: 6vw 4vw 2vw 4vw;
   text-align: justify;
   transform: skew(-5deg);
+  font-size: 1.2vw;
 }
 #yellow .tech-box .tech-text-box:after {
   content: "";
