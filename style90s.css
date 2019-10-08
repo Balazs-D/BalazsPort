@@ -86,7 +86,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 110;
-  left: 15%;
+  left: 40%;
   top: 2vw;
   box-shadow: 0.2vw 1vw 1vw rgba(65, 55, 114, 0.75);
   animation: float 4s ease-in-out infinite;
@@ -168,7 +168,7 @@ body {
 
 nav {
   position: absolute;
-  left: 29%;
+  left: 44.5%;
   bottom: 10%;
   z-index: 90;
   width: 10vw;
@@ -187,9 +187,10 @@ nav ul {
   perspective: 100px;
   width: 10vw;
   height: 10vw;
-  background: transparent;
+  background: #F966EA;
   border-radius: 50%;
   box-shadow: 0.6vw 0.6vw 0.4vw rgba(65, 55, 114, 0.75);
+  border: 0.05vw solid #000077;
   box-shadow: inset 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75), 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
   z-index: 92;
 }
@@ -313,83 +314,83 @@ nav .button-contact {
   border-right: 1.21vw solid #624B9D;
   border-left: 1.21vw solid #624B9D;
   display: flex;
-  justify-content: center;
-  overflow: scroll;
+  justify-content: flex-end;
+  align-items: center;
   position: absolute;
   z-index: 60;
-  right: 20%;
+  right: 100%;
   transform: skew(20deg);
 }
 #yellow #skills {
-  width: 47%;
-  overflow: scroll;
-  position: absolute;
-  display: none;
-  flex-direction: column;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  margin-top: 18vw;
+  margin-right: 14vw;
+  flex-wrap: wrap;
+  transform: skew(-20deg);
   z-index: 110;
-  top: 20%;
-  left: 38%;
+  top: 25%;
+  left: 35%;
 }
-#yellow .tech-box {
-  height: 16.5vw;
-  width: 72%;
-  z-index: 55;
-  margin-top: 5vw;
-  margin-bottom: 3vw;
-  background: transparent;
-  opacity: 0;
-  border: 0.2vw solid #000077;
-  transform: skew(-25deg);
-  font-family: john-reg-joe;
-  color: #000077;
-  border-radius: 1%;
-  box-shadow: 0.6vw 0.6vw 0.8vw rgba(65, 55, 114, 0.75);
+#yellow #skills .icon-cont {
+  height: 40vw;
+  width: 100%;
 }
-#yellow .tech-box .tech-box-titel {
-  position: absolute;
-  top: 8%;
-  left: 13%;
-  transform: skew(-5deg);
+#yellow #skills .icon-cont div {
+  position: relative;
+  width: 10vw;
+  height: 100%;
+  display: inline;
+}
+#yellow #skills .icon-cont div:hover img {
+  transform: scale(1.3);
+  opacity: 0.4;
+}
+#yellow #skills .icon-cont div:hover .tooltip {
+  opacity: 1;
+  width: 130%;
+}
+#yellow #skills .icon-cont div img {
+  width: 6vw;
+  margin: 2vw;
+  transition: all 0.3s cubic-bezier(0.56, -0.61, 0.92, 1.63);
+}
+#yellow #skills .icon-cont div .tooltip {
+  text-align: center;
   font-family: john-fat-joe;
-  font-size: 1.3vw;
-  text-transform: uppercase;
-}
-#yellow .tech-box .fab,
-#yellow .tech-box .fas {
-  background: #E7DA3E;
+  font-size: 1.5vw;
+  transition: all 0.5s cubic-bezier(0.56, -0.61, 0.92, 1.63);
+  opacity: 0;
+  padding: 0.5vw;
+  box-shadow: 0.1vw 0.2vw 0.3vw #5F6BF0;
+  color: #000077;
+  position: absolute;
+  bottom: 320%;
+  left: -16%;
+  width: 0%;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAALklEQVQYV2P8mfbqPwMUsM8SY2SECPxvZJ8l3gASBwuAZECcn2kvG8AMGAdEAwDUBBOVnU/a+wAAAABJRU5ErkJggg==");
   border: 0.2vw solid #000077;
-  font-size: 4vw;
-  padding: 1vw;
-  position: absolute;
-  z-index: 65;
-  bottom: 75%;
-  right: 92%;
-  transform: skew(-5deg);
-  box-shadow: 0.6vw 0.6vw 0.8vw rgba(65, 55, 114, 0.75);
   border-radius: 4%;
+  padding: 0vw 0vw;
 }
-#yellow .tech-box .tech-text-box {
-  height: 18vw;
-  width: 100%;
+#yellow #skills .icon-cont div .scrumtool {
   position: absolute;
-  padding: 6vw 4vw 2vw 4vw;
-  text-align: justify;
-  transform: skew(-5deg);
-  font-size: 1.2vw;
+  left: -29%;
 }
-#yellow .tech-box .tech-text-box:after {
-  content: "";
-  height: 17vw;
-  width: 100%;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAK0lEQVQYV2Ns/fT+PwMQVPMJMoJoEGDEKgiTBdEgBSAdcC0wAbB2ZJUw1QAbHxNrc4MSwgAAAABJRU5ErkJggg==");
-  background-repeat: repeat;
-  opacity: 0.3;
-  transform: skew(5deg);
-  position: absolute;
-  z-index: 54;
-  top: 2.5%;
-  left: 2.5%;
+#yellow #skills .icon-cont div .sass {
+  width: 6vw;
+}
+#yellow #skills .icon-cont div .illustrator {
+  width: 6.2vw;
+}
+#yellow #skills .icon-cont div .ae {
+  width: 5.85vw;
+}
+#yellow #skills .icon-cont div .scrum {
+  width: 10vw;
 }
 
 #blue {
@@ -495,7 +496,7 @@ nav .button-contact {
   border-right: 2vw solid #624B9D;
   position: absolute;
   z-index: 60;
-  left: 100%;
+  left: 120%;
   transform: skew(60deg);
 }
 

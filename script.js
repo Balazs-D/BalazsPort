@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
 
+
     $(window).on('load', function() {
         $("#yellow").css({right: '100%'}); 
         $("#pink").css({left: '120%'});
@@ -10,7 +11,7 @@ jQuery(document).ready(function(){
 
         $("#circle-frame").css({left: '40%'});
         $("#nav").css({left: '44.5%'});
-        $(".ul").css({background: 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQYV2NkwAIYYWK/OET+s/14A+aDCZAATBIkgVslurEAYWYMBpfCIVgAAAAASUVORK5CYII=")'});
+        $(".ul").css({background: 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQYV2P8mfbqPwMUsM8SY2SECYA4IHGwAIwDFoAph9EANcwMBStTTJcAAAAASUVORK5CYII=")'});
         $("#circle-in").css({background: 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQYV2OMz/7wf+FUAUYGKADxUTgwSbAgTDWMxq4Sm5kA/zMdeIVJgBkAAAAASUVORK5CYII=")'});
 
         $("nav").animate({});
@@ -126,6 +127,7 @@ jQuery(document).ready(function(){
     $(".button-skills").mouseenter(function(){
         $(".cont-popup").animate({bottom: "-160%"});
         $(".a-cont").hide();
+        $('.button-contact').attr('style', 'background: #FF8500');
 
 
        
@@ -135,8 +137,13 @@ jQuery(document).ready(function(){
         $(".a-cont").show();
         $(".con-i").show();
 
-        $(".cont-popup").animate({bottom: "-60%"});       
-       
+        $(".cont-popup").animate({bottom: "-60%"});  
+        $('.button-contact').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2NkQAKtn97/Z4TxQZxqPkFGsACMA2IzInNAAgD4nw9qAYR7cAAAAABJRU5ErkJggg==")');
+
+    $(",cont-contact").mouseleave(function(){
+                $('.button-contact').attr('style', 'background: #FF8500');
+
+    })
 
 
     });
@@ -144,7 +151,8 @@ jQuery(document).ready(function(){
     $("#nav").mouseleave(function(){
         $(".cont-popup").animate({bottom: "-160%"});
         $(".con-i").delay().hide();
-            
+        $('.button-contact').attr('style', 'background: #FF8500');
+
         
             
     });
@@ -162,7 +170,8 @@ jQuery(document).ready(function(){
     $(".cont-popup").mouseleave(function(){
        $(".cont-popup").animate({bottom: "-160%"}, "slow");
         $(".a-cont").delay().hide();
-       
+        $('.button-contact').attr('style', 'background: #FF8500');
+
      
     
     });
