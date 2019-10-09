@@ -142,12 +142,20 @@ cursive;
 * {
     margin: 0;
     box-sizing: border-box;
+
+
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
-    height: 52vw;
+    height: 100vh;
     width: 100vw;
     background: $lightblue-color;
+    overflow: hidden;
+
 }
 
 #container {
@@ -179,8 +187,8 @@ body {
 
 
     #circle-in {
-        width: 18.1vw;
-        height: 18.1vw;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         background: lightblue;
         display: flex;
@@ -283,7 +291,7 @@ body {
 
 // ===================================== NAVIGATION
 
-nav {
+#nav {
 
     position: absolute;
     left: 44.5%;
@@ -304,7 +312,7 @@ nav {
     box-shadow: .1vw .4vw 1vw rgba(65, 55, 114, 0.75);
 
 
-    ul {
+    .ul {
         position: absolute;
         // left: 25%;
         // top: 25%;
@@ -327,7 +335,7 @@ nav {
             height: 10vw;
             width: 14vw;
             position: absolute;
-            bottom: -160%;
+            bottom: -200%;
             left: -20%;
             z-index: 95;
             // transform: rotateX(0deg) rotateY(0deg) skew(5deg);
@@ -484,7 +492,7 @@ nav {
 
 // ===================================== SKILLS
 #yellow {
-    height: 52vw;
+    height: 100%;
     width: 100%;
     background: $yellow-color;
     border-right: 1.21vw solid $purple-color;
@@ -575,7 +583,7 @@ nav {
                     padding: 0.5vw;
                     box-shadow: 0.1vw 0.2vw 0.3vw $blue-color;
 
-                    
+
                     color: $darkblue-color;
 
                     position: absolute;
@@ -585,13 +593,13 @@ nav {
                     width: 0%;
                     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAALklEQVQYV2P8mfbqPwMUsM8SY2SECPxvZJ8l3gASBwuAZECcn2kvG8AMGAdEAwDUBBOVnU/a+wAAAABJRU5ErkJggg==");
                     border: 0.2vw solid $darkblue-color;
-                    
-                    border-radius: 4%; 
-                     
 
-                    padding: 0vw 0vw; 
+                    border-radius: 4%;
 
-                    
+
+                    padding: 0vw 0vw;
+
+
 
 
 
@@ -788,6 +796,313 @@ nav {
     left: 120%;
 
     transform: skew(60deg);
+
+
+}
+
+
+// ==================================== MEDIA QUERIES
+
+@media screen and (max-width: 480px) {
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        // background: $lightblue-color;
+        // overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #yellow,
+    #blue,
+    #pink {
+        display: none;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    #circle-frame {
+        width: 80vw;
+        height: 80vw;
+        border-radius: 50%;
+        border: 1vw solid darkcyan;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 110;
+        margin-left: -30vw;
+        margin-top: 15vh;
+        // top: 2vw;
+        box-shadow: 0.2vw 1vw 1vw $purple-shadow;
+        animation: float 4s ease-in-out infinite;
+
+
+        #circle-in {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            box-shadow: 0.2vw 1vw 1vw $purple-shadow, inset 0.2vw 1vw 1vw rgba(65, 55, 114, 0.75);
+            z-index: 0;
+
+
+        }
+
+        #logo {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: all .2s cubic-bezier(.56, -0.61, .92, 1.63);
+            animation: dry-float 4s ease-in-out infinite;
+
+        }
+
+        .logo-bg {
+            width: 110%;
+            height: 100%;
+            position: absolute;
+            top: .5%;
+            z-index: 2;
+
+
+        }
+
+        .logo-name {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 6%;
+            z-index: 3;
+
+            transition: all .2s cubic-bezier(.56, -0.61, .92, 1.63);
+            animation: sfloat 4s ease-in-out infinite;
+
+        }
+
+        #logo:hover {
+            transform: scale(1.2);
+        }
+
+        #logo:hover .logo-name {
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 4%;
+            z-index: 3;
+
+
+        }
+
+        #logo:hover .logo-bg {
+            top: 2%;
+            z-index: 2;
+
+        }
+
+        .titel {
+            font-family: 'Rock Salt', cursive;
+            color: black;
+            letter-spacing: 0.4vw;
+            line-height: 6vw;
+            text-transform: uppercase;
+            text-outline: #000077;
+
+            text-shadow: 0vw 0vw 0.02vw darkblue, 0.2vw 0.1vw 0.1vw $purple-shadow;
+            font-size: 4.3vw;
+
+        }
+
+        .intro {
+            position: absolute;
+            z-index: 110;
+
+
+            top: 9%;
+            left: 10%;
+            z-index: 5;
+        }
+
+        .outro {
+            position: absolute;
+            top: 70%;
+            left: 30%;
+            z-index: 5;
+
+
+        }
+    }
+
+    #nav {
+
+        // position: absolute;
+        // left: 44.5%;
+        // bottom: 10%;
+        // z-index: 90;
+        width: 100%;
+        // height: 20vw;
+
+
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        border-radius: 0%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        background: red;
+        border: 0vw solid darkcyan;
+        // box-shadow: .1vw .4vw 1vw rgba(65, 55, 114, 0.75);
+
+
+        .ul {
+            width: 100%;
+            
+
+            // perspective: 100000px;
+            display: flex;
+            justify-content: space-around;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // flex-direction: column;
+
+            // background: $pink-color;
+            border-radius: 0%;
+            // @include large-box-shadow;
+            // border: .05vw solid $darkblue-color;
+
+            // box-shadow: inset .1vw .4vw 1vw rgba(65, 55, 114, 0.75), .1vw .4vw 1vw rgba(65, 55, 114, 0.75);
+
+            // z-index: 92;
+
+           
+
+
+
+
+        }
+
+
+        .li {
+            list-style: none;
+            @include large-drop-shadow;
+            display: flex;
+            flex-direction: column;
+            transform: rotateX(0deg) rotateY(0deg);
+            width: 20%;
+        
+
+
+
+
+        }
+
+        .button {
+            font-family: john-reg-joe;
+            font-size: 1.5vw;
+            height: 8vh;
+            width: 28vw;
+            text-align: center;
+            background: $orange-color;
+            border: 0.02vw solid $darkblue-color;
+
+            @include large-box-shadow;
+            outline: none;
+            font-size: 4vw;
+            font-family: john-fat-joe;
+           
+        }
+
+        .cont-popup {
+            background: $yellow-color;
+            border: 0.09vw solid $darkblue-color;
+            height: 10vw;
+            width: 14vw;
+            position: absolute;
+            bottom: -200%;
+            left: -20%;
+            z-index: 95;
+            // transform: rotateX(0deg) rotateY(0deg) skew(5deg);
+            box-shadow: .2vw .4vw 1vw rgba(65, 55, 114, 0.75);
+            border-top-left-radius: 4%;
+            border-top-right-radius: 4%;
+            display: none;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            font-family: john-fat-joe;
+            text-transform: uppercase;
+
+
+
+            .a-cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin: 3.1vw .5vw 0vw .5vw;
+                flex-basis: 1;
+                padding: .3vw;
+                text-decoration: none;
+                text-align: center;
+                font-size: 0.7vw;
+                background: $orange-color;
+                border: 0.09vw solid $darkblue-color;
+                border-radius: 6%;
+                box-shadow: .1vw .15vw .2vw rgba(65, 55, 114, 0.75);
+
+
+
+
+
+
+            }
+
+            .con-i {
+
+                font-size: 1.7vw;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background: $yellow-color;
+                border: 0.09vw solid $darkblue-color;
+                border-radius: 50%;
+                width: 3.8vw;
+                height: 3.8vw;
+                margin-bottom: 0.3vw;
+                padding-top: 1.1vw;
+                box-shadow: .1vw .1vw .3vw rgba(65, 55, 114, 0.75);
+
+
+
+            }
+
+           
+
+        }
+    }
 
 
 }

@@ -62,10 +62,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  height: 52vw;
+  height: 100vh;
   width: 100vw;
   background: #85F2EF;
+  overflow: hidden;
 }
 
 #container {
@@ -92,8 +97,8 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 #circle-frame #circle-in {
-  width: 18.1vw;
-  height: 18.1vw;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: lightblue;
   display: flex;
@@ -166,7 +171,7 @@ body {
   z-index: 5;
 }
 
-nav {
+#nav {
   position: absolute;
   left: 44.5%;
   bottom: 10%;
@@ -182,7 +187,7 @@ nav {
   border: 5.5vw solid darkcyan;
   box-shadow: 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
 }
-nav ul {
+#nav .ul {
   position: absolute;
   perspective: 100px;
   width: 10vw;
@@ -194,13 +199,13 @@ nav ul {
   box-shadow: inset 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75), 0.1vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
   z-index: 92;
 }
-nav ul .cont-popup {
+#nav .ul .cont-popup {
   background: #E7DA3E;
   border: 0.09vw solid #000077;
   height: 10vw;
   width: 14vw;
   position: absolute;
-  bottom: -160%;
+  bottom: -200%;
   left: -20%;
   z-index: 95;
   box-shadow: 0.2vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
@@ -213,7 +218,7 @@ nav ul .cont-popup {
   font-family: john-fat-joe;
   text-transform: uppercase;
 }
-nav ul .cont-popup .a-cont {
+#nav .ul .cont-popup .a-cont {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -229,7 +234,7 @@ nav ul .cont-popup .a-cont {
   border-radius: 6%;
   box-shadow: 0.1vw 0.15vw 0.2vw rgba(65, 55, 114, 0.75);
 }
-nav ul .cont-popup .con-i {
+#nav .ul .cont-popup .con-i {
   font-size: 1.7vw;
   flex-direction: row;
   justify-content: center;
@@ -244,18 +249,18 @@ nav ul .cont-popup .con-i {
   padding-top: 1.1vw;
   box-shadow: 0.1vw 0.1vw 0.3vw rgba(65, 55, 114, 0.75);
 }
-nav ul .cont-popup .con-i:hover {
+#nav .ul .cont-popup .con-i:hover {
   background: #5F6BF0;
   border: 0.09vw solid #000077;
   color: #E7DA3E;
   font-size: 1.7vw;
   box-shadow: 0.05vw 0.05vw 0.2vw rgba(65, 55, 114, 0.75);
 }
-nav li {
+#nav li {
   list-style: none;
   drop-shadow: 0.6vw 0.6vw 0.4vw rgba(65, 55, 114, 0.75);
 }
-nav .button {
+#nav .button {
   font-family: john-reg-joe;
   font-size: 1.5vw;
   width: 8vw;
@@ -268,32 +273,32 @@ nav .button {
   align-items: center;
   outline: none;
 }
-nav .button:hover {
+#nav .button:hover {
   box-shadow: 0.1vw 0.1vw 0.4vw rgba(65, 55, 114, 0.75);
   margin: 0.1vw 0.1vw 0vw 0vw;
 }
-nav .cont-about {
+#nav .cont-about {
   position: absolute;
   left: 18%;
   top: 7%;
   transform: rotateY(10deg);
   z-index: 95;
 }
-nav .cont-work {
+#nav .cont-work {
   position: absolute;
   right: 10%;
   top: 27%;
   transform: rotateY(12deg);
   z-index: 96;
 }
-nav .cont-skills {
+#nav .cont-skills {
   position: absolute;
   left: 20%;
   top: 47%;
   transform: rotateX(6deg) rotateY(16deg);
   z-index: 97;
 }
-nav .cont-contact {
+#nav .cont-contact {
   position: absolute;
   left: 0%;
   top: 65%;
@@ -301,14 +306,14 @@ nav .cont-contact {
   z-index: 96;
   font-size: 0.5vw;
 }
-nav .button-contact {
+#nav .button-contact {
   width: 10vw;
   transition: width 0.2s ease-in-out;
   justify-content: flex-start;
 }
 
 #yellow {
-  height: 52vw;
+  height: 100%;
   width: 100%;
   background: #E7DA3E;
   border-right: 1.21vw solid #624B9D;
@@ -498,6 +503,207 @@ nav .button-contact {
   z-index: 60;
   left: 120%;
   transform: skew(60deg);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #yellow,
+#blue,
+#pink {
+    display: none;
+  }
+
+  #container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #circle-frame {
+    width: 80vw;
+    height: 80vw;
+    border-radius: 50%;
+    border: 1vw solid darkcyan;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    margin-left: -30vw;
+    margin-top: 15vh;
+    box-shadow: 0.2vw 1vw 1vw rgba(65, 55, 114, 0.75);
+    animation: float 4s ease-in-out infinite;
+  }
+  #circle-frame #circle-in {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 0.2vw 1vw 1vw rgba(65, 55, 114, 0.75), inset 0.2vw 1vw 1vw rgba(65, 55, 114, 0.75);
+    z-index: 0;
+  }
+  #circle-frame #logo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.56, -0.61, 0.92, 1.63);
+    animation: dry-float 4s ease-in-out infinite;
+  }
+  #circle-frame .logo-bg {
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    top: 0.5%;
+    z-index: 2;
+  }
+  #circle-frame .logo-name {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 6%;
+    z-index: 3;
+    transition: all 0.2s cubic-bezier(0.56, -0.61, 0.92, 1.63);
+    animation: sfloat 4s ease-in-out infinite;
+  }
+  #circle-frame #logo:hover {
+    transform: scale(1.2);
+  }
+  #circle-frame #logo:hover .logo-name {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 4%;
+    z-index: 3;
+  }
+  #circle-frame #logo:hover .logo-bg {
+    top: 2%;
+    z-index: 2;
+  }
+  #circle-frame .titel {
+    font-family: "Rock Salt", cursive;
+    color: black;
+    letter-spacing: 0.4vw;
+    line-height: 6vw;
+    text-transform: uppercase;
+    text-outline: #000077;
+    text-shadow: 0vw 0vw 0.02vw darkblue, 0.2vw 0.1vw 0.1vw rgba(65, 55, 114, 0.75);
+    font-size: 4.3vw;
+  }
+  #circle-frame .intro {
+    position: absolute;
+    z-index: 110;
+    top: 9%;
+    left: 10%;
+    z-index: 5;
+  }
+  #circle-frame .outro {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    z-index: 5;
+  }
+
+  #nav {
+    width: 100%;
+    border-radius: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: red;
+    border: 0vw solid darkcyan;
+  }
+  #nav .ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0%;
+  }
+  #nav .li {
+    list-style: none;
+    drop-shadow: 0.6vw 0.6vw 0.4vw rgba(65, 55, 114, 0.75);
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(0deg) rotateY(0deg);
+    width: 20%;
+  }
+  #nav .button {
+    font-family: john-reg-joe;
+    font-size: 1.5vw;
+    height: 8vh;
+    width: 28vw;
+    text-align: center;
+    background: #FF8500;
+    border: 0.02vw solid #000077;
+    box-shadow: 0.6vw 0.6vw 0.4vw rgba(65, 55, 114, 0.75);
+    outline: none;
+    font-size: 4vw;
+    font-family: john-fat-joe;
+  }
+  #nav .cont-popup {
+    background: #E7DA3E;
+    border: 0.09vw solid #000077;
+    height: 10vw;
+    width: 14vw;
+    position: absolute;
+    bottom: -200%;
+    left: -20%;
+    z-index: 95;
+    box-shadow: 0.2vw 0.4vw 1vw rgba(65, 55, 114, 0.75);
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: john-fat-joe;
+    text-transform: uppercase;
+  }
+  #nav .cont-popup .a-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3.1vw 0.5vw 0vw 0.5vw;
+    flex-basis: 1;
+    padding: 0.3vw;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.7vw;
+    background: #FF8500;
+    border: 0.09vw solid #000077;
+    border-radius: 6%;
+    box-shadow: 0.1vw 0.15vw 0.2vw rgba(65, 55, 114, 0.75);
+  }
+  #nav .cont-popup .con-i {
+    font-size: 1.7vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #E7DA3E;
+    border: 0.09vw solid #000077;
+    border-radius: 50%;
+    width: 3.8vw;
+    height: 3.8vw;
+    margin-bottom: 0.3vw;
+    padding-top: 1.1vw;
+    box-shadow: 0.1vw 0.1vw 0.3vw rgba(65, 55, 114, 0.75);
+  }
 }
 
 /*# sourceMappingURL=style90s.css.map */
