@@ -22,10 +22,12 @@ function checkMedia(){
             
             $(".cont-popup").show();
             $(".cont-popup").animate({bottom: "-200%"});
+            $('.button-about').attr('style', 'background: #FF8500');
+            $('.button-work').attr('style', 'background: #FF8500');
+            $('.button-skills').attr('style', 'background: #FF8500');
+            $('.button-contact').attr('style', 'background: #FF8500');
 
-            });
-
-        
+        });
 
         $(".button-skills").click(function () {
       
@@ -36,11 +38,15 @@ function checkMedia(){
 
             $("#skills").show();
             $("#skills").animate({})
-            $("#circle-frame").animate({width: "20vw",
-            height: "20vw", left: "33%", top: "-12%" });
-            // $("#circle-in").animate({width: "15vw", height: "15vw"})
+            $("#circle-frame").animate({width: "24vw",
+            height: "24vw", left: "35%", top: "-12%" });
             $(".titel").hide();
             $(".cont-popup").animate({bottom: "-200%"});
+
+            $('.button-skills').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
+            $('.button-about').attr('style', 'background: #FF8500');
+            $('.button-work').attr('style', 'background: #FF8500');
+            $('.button-contact').attr('style', 'background: #FF8500');
 
         });
 
@@ -52,11 +58,15 @@ function checkMedia(){
             $("#pink").animate({top: "5%", left: "100%"});
 
             $("#pink").hide();
-            $("#circle-frame").animate({width: "20vw",
-            height: "20vw", left: "33%", top: "-12%" });
-            // $("#circle-in").animate({width: "15vw", height: "15vw"})
+            $("#circle-frame").animate({width: "24vw",
+            height: "24vw", left: "35%", top: "-12%" });
             $(".titel").hide();
             $(".cont-popup").animate({bottom: "-200%"});
+
+            $('.button-about').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
+            $('.button-work').attr('style', 'background: #FF8500');
+            $('.button-skills').attr('style', 'background: #FF8500');
+            $('.button-contact').attr('style', 'background: #FF8500');
 
         });
 
@@ -71,9 +81,13 @@ function checkMedia(){
             $("#yellow").animate({right: "-100%", bottom: "10%"});
             $(".cont-popup").animate({bottom: "-200%"});
            
-            $("#circle-frame").animate({width: "20vw",
-            height: "20vw", left: "33%", top: "-12%" });
-            
+            $("#circle-frame").animate({width: "24vw",
+            height: "24vw", left: "35%", top: "-12%" });
+            $('.button-work').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
+            $('.button-about').attr('style', 'background: #FF8500');
+            $('.button-skills').attr('style', 'background: #FF8500');
+            $('.button-contact').attr('style', 'background: #FF8500');
+
             
 
         });
@@ -88,6 +102,11 @@ function checkMedia(){
             $("#circle-frame").animate({width: "80vw",
             height: "80vw", left: "40%", top: "0%" });
             $(".titel").show();
+
+            $('.button-contact').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
+            $('.button-about').attr('style', 'background: #FF8500');
+            $('.button-skills').attr('style', 'background: #FF8500');
+            $('.button-work').attr('style', 'background: #FF8500');
 
         });
        
@@ -124,6 +143,7 @@ function checkMedia(){
         //     $(".a-cont").hide();
         // });
 
+// ===================================== Click on Logo
 
         $("#logo").click(function () {
             $("#yellow").animate({
@@ -174,7 +194,7 @@ function checkMedia(){
                 left: "20%"
             });
         });
-// ===================================== CLick on Skills
+// ===================================== Click on Skills
         $(".button-skills").click(function () {
             $(".tech-box").animate({
                 opacity: '1'
@@ -297,6 +317,7 @@ function checkMedia(){
 
 
         });
+// ===================================== Click on Work
 
         $(".button-work").click(function () {
             $("#about").hide();
@@ -349,11 +370,7 @@ function checkMedia(){
 
         });
 
-        // $(".button-contact").click(function(){
-        //     $(".cont-popup").animate({bottom: "-60%"});
-        //     $(".a-cont").show();
-        //     $(".button-contact").css({"background":"white", "font-family":"john-fat-joe"});
-        // });
+// =====================================  Contact Pop-Up
 
         $(".button-skills").mouseenter(function () {
             $(".cont-popup").animate({
@@ -413,8 +430,6 @@ function checkMedia(){
             $(".a-cont").delay().hide();
             $('.button-contact').attr('style', 'background: #FF8500');
 
-
-
         });
 
         $(".con-i").mouseenter(function () {
@@ -431,10 +446,6 @@ function checkMedia(){
             $(".a-cont").show();
 
         });
-
-
-
-
-    }
+        }
 
 }});
