@@ -21,7 +21,7 @@ function checkMedia(){
             $(".con-i").show();
             
             $(".cont-popup").show();
-            $(".cont-popup").animate({bottom: "-200%"});
+            $(".cont-popup").animate({bottom: "-250%"});
             $('.button-about').attr('style', 'background: #FF8500');
             $('.button-work').attr('style', 'background: #FF8500');
             $('.button-skills').attr('style', 'background: #FF8500');
@@ -41,7 +41,7 @@ function checkMedia(){
             $("#circle-frame").animate({width: "24vw",
             height: "24vw", left: "35%", top: "-12%" });
             $(".titel").hide();
-            $(".cont-popup").animate({bottom: "-200%"});
+            $(".cont-popup").animate({bottom: "-250%"});
 
             $('.button-skills').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
             $('.button-about').attr('style', 'background: #FF8500');
@@ -61,7 +61,7 @@ function checkMedia(){
             $("#circle-frame").animate({width: "24vw",
             height: "24vw", left: "35%", top: "-12%" });
             $(".titel").hide();
-            $(".cont-popup").animate({bottom: "-200%"});
+            $(".cont-popup").animate({bottom: "-250%"});
 
             $('.button-about').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2P8DwSMQMAABGA2iAHjgGi4DJgDAiBlMA6IBgAlUxP9eF61ZwAAAABJRU5ErkJggg==")');
             $('.button-work').attr('style', 'background: #FF8500');
@@ -79,7 +79,7 @@ function checkMedia(){
             $("#pink").animate({top: "5%", left: "10%"});
             $("#blue").animate({right: "100%", bottom: "10%"});
             $("#yellow").animate({right: "-100%", bottom: "10%"});
-            $(".cont-popup").animate({bottom: "-200%"});
+            $(".cont-popup").animate({bottom: "-250%"});
            
             $("#circle-frame").animate({width: "24vw",
             height: "24vw", left: "35%", top: "-12%" });
