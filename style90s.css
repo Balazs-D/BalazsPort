@@ -641,7 +641,7 @@ body {
     background: #E7DA3E;
     border: 0.21vw solid #624B9D;
     border-radius: 0%;
-    bottom: -200%;
+    bottom: -250%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
