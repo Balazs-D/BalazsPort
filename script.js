@@ -6,6 +6,90 @@ jQuery(document).ready(function () {
 function checkMedia(){
 
     if (window.matchMedia("(max-width: 480px)").matches) {
+
+        $("#logo").click(function () {
+
+            $("#yellow").animate({right: "-100%", bottom: "10%"});
+            $("#blue").animate({right: "-100%", bottom: "10%"});
+            $("#pink").animate({top: "5%", left: "100%"});
+
+            $("#circle-frame").animate({width: "80vw",
+            height: "80vw", left: "40%", top: "0%" });
+            $(".titel").show();
+
+            $(".a-cont").show();
+            $(".con-i").show();
+            
+            $(".cont-popup").show();
+            $(".cont-popup").animate({bottom: "-200%"});
+
+            });
+
+        
+
+        $(".button-skills").click(function () {
+      
+            $("#yellow").show();
+            $("#yellow").animate({right: "10%", bottom: "10%"});
+            $("#blue").animate({right: "100%", bottom: "10%"});
+            $("#pink").animate({top: "5%", left: "-100%"});
+
+            $("#skills").show();
+            $("#skills").animate({})
+            $("#circle-frame").animate({width: "20vw",
+            height: "20vw", left: "33%", top: "-12%" });
+            // $("#circle-in").animate({width: "15vw", height: "15vw"})
+            $(".titel").hide();
+            $(".cont-popup").animate({bottom: "-200%"});
+
+        });
+
+        $(".button-about").click(function () {
+            $("#blue").show();
+
+            $("#blue").animate({right: "10%", bottom: "10%"});
+            $("#yellow").animate({right: "-100%", bottom: "10%"});
+            $("#pink").animate({top: "5%", left: "100%"});
+
+            $("#pink").hide();
+            $("#circle-frame").animate({width: "20vw",
+            height: "20vw", left: "33%", top: "-12%" });
+            // $("#circle-in").animate({width: "15vw", height: "15vw"})
+            $(".titel").hide();
+            $(".cont-popup").animate({bottom: "-200%"});
+
+        });
+
+        $(".button-work").click(function () {
+      
+            $("#pink").show();
+            $("#skills").hide();
+            $(".titel").hide();
+
+            $("#pink").animate({top: "5%", left: "10%"});
+            $("#blue").animate({right: "100%", bottom: "10%"});
+            $("#yellow").animate({right: "-100%", bottom: "10%"});
+            $(".cont-popup").animate({bottom: "-200%"});
+           
+            $("#circle-frame").animate({width: "20vw",
+            height: "20vw", left: "33%", top: "-12%" });
+            
+            
+
+        });
+
+        $(".button-contact").click(function () {
+
+            $(".cont-popup").show();
+            $("#pink").hide();
+            $("#blue").hide();
+            $("#yellow").hide();
+            $(".cont-popup").animate({bottom: "250%"});
+            $("#circle-frame").animate({width: "80vw",
+            height: "80vw", left: "40%", top: "0%" });
+            $(".titel").show();
+
+        });
        
     } 
     
@@ -90,7 +174,7 @@ function checkMedia(){
                 left: "20%"
             });
         });
-
+// ===================================== CLick on Skills
         $(".button-skills").click(function () {
             $(".tech-box").animate({
                 opacity: '1'
@@ -154,6 +238,7 @@ function checkMedia(){
             });
 
         });
+// ===================================== Click on About
 
         $(".button-about").click(function () {
             $(".text-box").animate({
@@ -290,7 +375,7 @@ function checkMedia(){
             });
             $('.button-contact').attr('style', 'background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQYV2NkQAKtn97/Z4TxQZxqPkFGsACMA2IzInNAAgD4nw9qAYR7cAAAAABJRU5ErkJggg==")');
 
-            $(",cont-contact").mouseleave(function () {
+            $(".cont-contact").mouseleave(function () {
                 $('.button-contact').attr('style', 'background: #FF8500');
 
             })

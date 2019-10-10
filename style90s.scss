@@ -819,7 +819,7 @@ body {
     #yellow,
     #blue,
     #pink {
-        display: none;
+        display: initial;
     }
 
     #container {
@@ -839,7 +839,7 @@ body {
         border-radius: 50%;
         border: 1vw solid darkcyan;
         background: transparent;
-        display: flex;
+        display: absolute;
         justify-content: center;
         align-items: center;
         z-index: 110;
@@ -953,51 +953,89 @@ body {
 
     #nav {
 
-        // position: absolute;
-        // left: 44.5%;
-        // bottom: 10%;
-        // z-index: 90;
+       
         width: 100%;
-        // height: 20vw;
 
 
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
         border-radius: 0%;
         position: absolute;
-        top: 0%;
+        bottom: 0%;
         left: 0%;
+        
 
-        background: red;
         border: 0vw solid darkcyan;
-        // box-shadow: .1vw .4vw 1vw rgba(65, 55, 114, 0.75);
 
 
         .ul {
             width: 100%;
-            
-
-            // perspective: 100000px;
             display: flex;
-            justify-content: space-around;
-            // width: 100%;
-            // height: 100%;
-            // display: flex;
-            // flex-direction: column;
-
-            // background: $pink-color;
+            justify-content: center;
             border-radius: 0%;
-            // @include large-box-shadow;
-            // border: .05vw solid $darkblue-color;
-
-            // box-shadow: inset .1vw .4vw 1vw rgba(65, 55, 114, 0.75), .1vw .4vw 1vw rgba(65, 55, 114, 0.75);
-
-            // z-index: 92;
-
+            align-content: center;
+            padding: 0;
            
+            .cont-popup {
+                height: 30vw;
+                width: 90vw;
+                background: $yellow-color;
+                border: 0.21vw solid $purple-color;
+                border-radius: 0%;
+                bottom: -200%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                font-family: john-fat-joe;
+                text-transform: uppercase;
+                z-index: 89;
 
+                .a-cont {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 3.1vw .5vw 0vw .5vw;
+                    flex-basis: 1;
+                    padding: .3vw;
+                    width: 30%;
+                    height: 80%;                    
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 3.7vw;
+                    background: $orange-color;
+                    border: 0.09vw solid $darkblue-color;
+                    border-radius: 2%;
+                    box-shadow: .1vw .15vw .2vw rgba(65, 55, 114, 0.75);
+    
+    
+    
+    
+    
+    
+                }
+    
+                .con-i {
+                    font-size: 6.7vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background: $yellow-color;
+                    border: 0.09vw solid $darkblue-color;
+                    border-radius: 50%;
+                    margin-bottom: 1vh;
+                    width: 12vw;
+                    height: 12vw;
+                    padding-top: 1.1vw;
+                    box-shadow: .1vw .1vw .3vw rgba(65, 55, 114, 0.75);
+    
+    
+    
+                }
+    
+               
+    
+            }
 
 
 
@@ -1007,12 +1045,13 @@ body {
         .li {
             list-style: none;
             @include large-drop-shadow;
-            display: flex;
-            flex-direction: column;
+            display: flex; 
+            flex-direction: row;
             transform: rotateX(0deg) rotateY(0deg);
-            width: 20%;
-        
-
+            width: 25vw;
+            position: initial;
+            align-items: left;
+z-index: 90;
 
 
 
@@ -1021,9 +1060,11 @@ body {
         .button {
             font-family: john-reg-joe;
             font-size: 1.5vw;
-            height: 8vh;
-            width: 28vw;
+            height: 100%;
+            width: 25vw;
+
             text-align: center;
+            
             background: $orange-color;
             border: 0.02vw solid $darkblue-color;
 
@@ -1034,75 +1075,333 @@ body {
            
         }
 
-        .cont-popup {
-            background: $yellow-color;
-            border: 0.09vw solid $darkblue-color;
-            height: 10vw;
-            width: 14vw;
-            position: absolute;
-            bottom: -200%;
-            left: -20%;
-            z-index: 95;
-            // transform: rotateX(0deg) rotateY(0deg) skew(5deg);
-            box-shadow: .2vw .4vw 1vw rgba(65, 55, 114, 0.75);
-            border-top-left-radius: 4%;
-            border-top-right-radius: 4%;
-            display: none;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: flex-start;
-            font-family: john-fat-joe;
-            text-transform: uppercase;
+        
+    
+        
+    
 
-
-
-            .a-cont {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                margin: 3.1vw .5vw 0vw .5vw;
-                flex-basis: 1;
-                padding: .3vw;
-                text-decoration: none;
-                text-align: center;
-                font-size: 0.7vw;
-                background: $orange-color;
-                border: 0.09vw solid $darkblue-color;
-                border-radius: 6%;
-                box-shadow: .1vw .15vw .2vw rgba(65, 55, 114, 0.75);
-
-
-
-
-
-
-            }
-
-            .con-i {
-
-                font-size: 1.7vw;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                background: $yellow-color;
-                border: 0.09vw solid $darkblue-color;
-                border-radius: 50%;
-                width: 3.8vw;
-                height: 3.8vw;
-                margin-bottom: 0.3vw;
-                padding-top: 1.1vw;
-                box-shadow: .1vw .1vw .3vw rgba(65, 55, 114, 0.75);
-
-
-
-            }
-
-           
-
-        }
+       
     }
 
+    #yellow {
+        height: 85%;
+        width: 80%;
+        background: $yellow-color;
+        border: 1.21vw solid $purple-color;
+        border-radius: 2%;
+       
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        // position: absolute;
+        // z-index: 60;
+        // right: 100%;
+    
+    
+        transform: skew(0deg);
+    
+        #skills {
+            height: 100%;
+            width: 100%;
+    background: $yellow-color;
+    
+    
+            // position: absolute;
+    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+           
+    padding: 0;
+    margin: 0;
+            // flex-wrap: wrap;
+            transform: skew(0deg);
+    overflow: scroll;
+    
+            z-index: 110;
+    
+           
+    
+    
+            .icon-cont {
+    
+                height: 100%;
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10%;
+                padding-left: 10%;
+    
+    
+    
+    
+                div {
+    
+                    position: relative;
+                    width: 10vw;
+                    height: 100%;
+                    display: inline;
+    
+    
+                    &:hover img {
+                        transform: scale(1.3);
+                        opacity: 0.4;
+    
+    
+    
+                    }
+    
+                    &:hover .tooltip {
+                        opacity: 1;
+                        width: 130%;
+                    }
+    
+                    img {
+                        width: 25vw;
+                        margin: 2vw;
+                        // border: .5vw solid black;
+                        // border-radius: 50%;
+                        transition: all .3s cubic-bezier(.56, -0.61, .92, 1.63);
+    
+    
+    
+    
+                    }
+    
+                    .tooltip {
+                        // text-align: center;
+                        // font-family: john-fat-joe;
+                        // font-size: 1.5vw;
+                        // transition: all .5s cubic-bezier(.56, -0.61, .92, 1.63);
+                        // opacity: 0;
+                        // padding: 0.5vw;
+                        // box-shadow: 0.1vw 0.2vw 0.3vw $blue-color;
+    
+    
+                        // color: $darkblue-color;
+    
+                        // position: absolute;
+                        // bottom: 320%;
+                        // left: -16%;
+                        // // height: 3vw;
+                        // width: 0%;
+                        // background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAALklEQVQYV2P8mfbqPwMUsM8SY2SECPxvZJ8l3gASBwuAZECcn2kvG8AMGAdEAwDUBBOVnU/a+wAAAABJRU5ErkJggg==");
+                        // border: 0.2vw solid $darkblue-color;
+    
+                        // border-radius: 4%;
+    
+    
+                        // padding: 0vw 0vw;
+    
+    
+    
+    
+    
+                    }
+    
+    
+    
+                    // .lastline {
+                    //     position: absolute;
+                    //     bottom:255%;
+                    //     left: 50%;
+                    // }
+    
+                    .scrumtool {
+                        position: absolute;
+    
+                        left: -29%;
+                    }
+    
+    
+                    .sass {
+                        width: 25vw;
+    
+    
+    
+                    }
+    
+                    .illustrator {
+                        width: 26.3vw;
+                    }
+    
+                    .ae {
+                        width: 25vw;
+                    }
+    
+                    .scrum {
+                        width: 38vw;
+                        margin-left: 3.5%;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+    #blue {
+        height: 85%;
+        width: 80%;
+        background: transparent;
+        border: 1.21vw solid $purple-color;
+        border-radius: 2%;
+        overflow: scroll;
+        right: 100%;
+    
+        position: absolute;
+        z-index: 50;
+    
+        #about {
+            width: 50%;
+    
+            padding-top: 18vw;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+    
+    
+            position: absolute;
+            z-index: 50;
+    
+            top: 20%;
+            left: 35%;
+    
+        }
+    
+        .text-box {
+            height: 15vw;
+            width: 70%;
+    
+            position: relative;
+            z-index: 55;
+    
+    
+            margin-bottom: 15vw;
+    
+            transform: skewX(-5deg);
+    
+            background: $lightblue-color;
+            opacity: 0;
+            border: 0.2vw solid $darkblue-color;
+    
+            @include large-box-shadow;
+    
+            .text-box-titel {
+    
+    
+                padding: 1vw 1vw 1vw 1vw;
+    
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: start;
+    
+                position: absolute;
+                z-index: 56;
+                bottom: 90%;
+                height: 24%;
+    
+                background: $lightblue-color;
+                border: 0.2vw solid $darkblue-color;
+                color: $darkblue-color;
+    
+                font-family: john-fat-joe;
+                font-size: 2vw;
+                text-transform: uppercase;
+                @include large-box-shadow;
+    
+    
+            }
+    
+            .box-one {
+                width: 21%;
+                right: 83%;
+    
+            }
+    
+            .box-two {
+                width: 37%;
+                right: 68%;
+            }
+    
+            .box-three {
+                width: 65%;
+                right: 40%;
+            }
+    
+            .box-four {
+                width: 72%;
+                right: 33%;
+            }
+    
+            .box-five {
+                width: 55%;
+                right: 50%;
+            }
+    
+            .text-box-text {
+                height: 100%;
+                width: 100%;
+                padding: 2vw;
+                text-align: justify;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                justify-content: center;
+    
+                font-size: 1.6vw;
+                font-family: john-reg-joe;
+                color: $darkblue-color;
+    
+            }
+    
+    
+    
+            &:after {
+                content: "";
+                height: 100%;
+                width: 100%;
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQYV2P8DwQMQMAIBCAazMYqCJNFpuFaQDpgRsAFYSpBkgBpdxACW4HJzgAAAABJRU5ErkJggg==");
+                background-repeat: repeat;
+                opacity: 0.3;
+    
+                position: absolute;
+                z-index: 54;
+    
+                top: 2.5%;
+                left: 1.5%;
+            }
+    
+        }
+    
+    }
+    
+    #pink {
+        height: 85%;
+        width: 80%;
+        background: transparent;
+        border: 1.21vw solid $purple-color;
+        border-radius: 2%;
+    
+        background: $pink-color;
+        
+        position: absolute;
+        z-index: 60;
+        // top: 0%;
+        // left: 50%;
+    
+    
+        transform: skew(0deg);
+    
+    
+    }
 
 }
+
+
+
