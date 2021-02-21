@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext } from "react";
+import styled from "styled-components";
+import ContextContainer from "./Context/Container";
+import { Context } from "./Context/Context";
+import Theme from "./Style/Theme";
+import GlobalFonts from "./Style/Global";
+import Header from "./Components/Header/Header";
+import About from "./Components/Screens/About";
+import Skills from "./Components/Screens/Skills";
 
-function App() {
+import Navbar from "./Components/Header/Navbar";
+import Logo from "./Components/Logo/Logo";
+import MainCont from "./Components/Screens/Main";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextContainer>
+      <Theme>
+        <GlobalFonts />
+        <MainCont>
+          <About id="about" />
+          <Skills />
+          <Navbar />
+          <Logo />
+        </MainCont>
+      </Theme>
+    </ContextContainer>
   );
-}
+};
 
 export default App;
