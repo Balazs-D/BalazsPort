@@ -5,8 +5,11 @@ const theme = {
   colors: {
     bgBlue: "#6DF2EE",
     bgPurple: "#F966EA",
-    bgYellow: "#E7DA3E",
+    // bgYellow: "#E7DA3E",
     mainPurple: "#624B9D",
+    bgDarkBlue: "#6652E4",
+    bgYellow: "#F1D625",
+    dark: "#3B2D5E",
   },
   fontSizes: {},
 };

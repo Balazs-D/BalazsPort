@@ -1,62 +1,56 @@
-import React from "react";
-import styled from "styled-components";
-import { ReactComponent as logoText } from "../../Graphics/SVG/logo.svg";
-
-const Container = styled.div`
-  /* width: 20vw; */
-  font-family: "logo";
-  /* display: inline-block; */
-  /* display: flex; */
-  /* justify-content: flex-start;
-  align-items: center; */
-  /* flex-direction: column; */
-  position: absolute;
-  margin-top: 2vw;
-
-  h1 {
-    width: 15vw;
-    font-size: 3vw;
-    margin: 0;
-    border: 2px solid ${(props) => props.theme.colors.mainPurple};
-    margin-bottom: 1vw;
-    padding: 10px 10px 2px 12px;
-    color: ${(props) => props.theme.colors.bgPurple};
-    box-shadow: -5px 5px 0px ${(props) => props.theme.colors.mainPurple};
-
-    &::after {
-      content: "BALAZS DANYADI";
-      position: absolute;
-      left: 17px;
-      top: 9px;
-      color: transparent;
-      -webkit-text-stroke: 1px ${(props) => props.theme.colors.mainPurple};
-    }
-  }
-  h3 {
-    font-size: 1vw;
-    width: 12vw;
-    margin: 0;
-    border: 2px solid ${(props) => props.theme.colors.mainPurple};
-    margin-bottom: 1vw;
-    padding: 10px 10px 7px 10px;
-    color: ${(props) => props.theme.colors.bgPurple};
-    box-shadow: -5px 5px 0px ${(props) => props.theme.colors.mainPurple};
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    /* -webkit-text-stroke: 1px ${(props) => props.theme.colors.mainPurple}; */
-  }
-`;
+import React, { useContext, useEffect } from "react";
+import { Context } from "../../Context/Context";
+import Wrapper from "./Logo.styles";
 
 const Logo = () => {
-  return (
-    <Container>
-      <h1>BALAZS DANYADI</h1>
-      {/* <h1>DANYADI</h1> */}
+  const gsap = window.gsap;
+  const tl = gsap.timeline();
+  const context = useContext(Context);
+  const {
+    isAbout,
+    isSkills,
+    isWorks,
+    setIsAbout,
+    setIsSkills,
+    setIsWorks,
+  } = context;
+  const goHome = () => {
+    setIsAbout(false);
+    setIsSkills(false);
+  };
 
-      <h3>Front-end Developer</h3>
-      {/* <h3>Developer</h3> */}
-    </Container>
+  useEffect(() => {
+    if (isAbout) {
+      tl.to(
+        "#logo",
+        { x: "-30vw", ease: "elastic.out(0.9, 1)" },
+        { duration: 1.9 }
+      );
+    } else if (isSkills) {
+      tl.to(
+        "#logo",
+        { x: "25vw", ease: "elastic.out(0.9, 1)" },
+        { duration: 1.9 }
+      );
+    } else if (isWorks) {
+      tl.to(
+        "#logo",
+        { x: "32vw", ease: "elastic.out(0.9, 1)" },
+        { duration: 1.9 }
+      );
+    } else {
+      tl.to(
+        "#logo",
+        { x: "0vw", ease: "elastic.out(0.9, 1)" },
+        { duration: 1.9 }
+      );
+    }
+  }, [isAbout, isSkills, isWorks]);
+  return (
+    <Wrapper id="logo" onClick={() => goHome()}>
+      <h1 className="item">BALAZS DANYADI</h1>
+      <h3 className="item">Front-end Developer</h3>
+    </Wrapper>
   );
 };
 
