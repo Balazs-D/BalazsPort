@@ -11,6 +11,7 @@ import Skills from "./Components/Screens/Skills";
 import Navbar from "./Components/Header/Navbar";
 import Logo from "./Components/Logo/Logo";
 import MainCont from "./Components/Screens/Main";
+
 const App = () => {
   return (
     <ContextContainer>

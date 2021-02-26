@@ -1,23 +1,25 @@
 import React from "react";
-
-import styled from "styled-components";
-
-const ContactCont = styled.div`
-  width: 100vw;
-  height: 100vw;
-  display: flex;
-  background-color: orange;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0vw;
-  transform: rotate(0deg);
-  /* right: -100vw; */
-`;
+import Wrapper from "./Contact.styles";
 
 const Contact = (props) => {
-  return <ContactCont id={props.id}></ContactCont>;
+  return (
+    <Wrapper id={props.id}>
+      <div>
+        <span>
+          <i class="fab fa-linkedin fa-4x"></i>
+          <p>LinkedIn</p>
+        </span>
+        <span>
+          <i class="fab fa-github-square fa-4x"></i>
+          <p>GitHub</p>
+        </span>
+        <span>
+          <i class="far fa-sticky-note fa-4x"></i>
+          <p>CV</p>
+        </span>
+      </div>
+    </Wrapper>
+  );
 };
 
 export default Contact;

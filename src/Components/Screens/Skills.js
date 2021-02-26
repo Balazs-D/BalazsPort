@@ -25,12 +25,14 @@ const SkillsCont = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border: 1px dashed green;
+    background: pink;
   }
 
   h3 {
     font-size: 1.6vw;
     /* text-shadow: 1px 1px ${(props) => props.theme.colors.bgPurple}; */
-    color: ${(props) => props.theme.colors.dark};
+    color: ${(props) => props.theme.colors.mainPurple};
     font-family: "text";
     position: relative;
 
@@ -47,18 +49,20 @@ const SkillsCont = styled.div`
   }
 
   p {
-    /* font-size: 1.3vw; */
-    /* text-shadow: 1px 1px ${(props) => props.theme.colors.bgPurple}; */
-    color: ${(props) => props.theme.colors.dark};
+    color: ${(props) => props.theme.colors.mainPurple};
   }
 `;
 
-const GridCont = styled(Grid)`
-  transform: skew(-20deg) translate(70%, 20%);
+const GridDiv = styled.div`
+  transform: skew(-20deg) translate(30%, 20%);
+  display: flex;
+  width: 50vw;
+  flex-wrap: wrap;
 `;
 
-const GridItem = styled(Grid)`
-  padding: 2vw;
+const GridItem = styled.div`
+  margin-right: 1vw;
+  width: 20vw;
 `;
 
 const Skills = (props) => {
@@ -78,10 +82,10 @@ const Skills = (props) => {
   return (
     <SkillsCont id={props.id}>
       <div id="cont">
-        <GridCont xs={6} container spacing={3}>
+        <GridDiv>
           {SkillsList.map((item, i) => {
             return (
-              <GridItem id="gridItem" item xs={6}>
+              <GridItem id="gridItem">
                 <h3>{item.title}</h3>
                 {item.list.map((list, i) => {
                   return <p key={i}>{list}</p>;
@@ -89,7 +93,7 @@ const Skills = (props) => {
               </GridItem>
             );
           })}
-        </GridCont>
+        </GridDiv>
       </div>
     </SkillsCont>
   );

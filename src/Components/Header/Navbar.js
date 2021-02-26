@@ -4,73 +4,106 @@ import { Context } from "../../Context/Context";
 import Cursor from "../../Graphics/1x/pointer.png";
 
 const NavCont = styled.ul`
-  width: 30vw;
-  height: 20vh;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 5vw;
-  position: absolute;
-  bottom: -5vw;
+  @media (min-width: 0px) {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    bottom: 0vw;
+    margin: 0;
+    padding: 0;
+    border-top: 10px solid ${(props) => props.theme.colors.mainPurple};
+  }
+  @media (min-width: 800px) {
+    border-top: none;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12vh;
+    position: absolute;
+    bottom: -5vw;
+  }
 `;
 
 const Li = styled.li`
-  text-decoration: none;
-  padding: 5px 10px 3px 10px;
-  border-radius: 0px;
-  font-family: "logo";
-  color: ${(props) => props.theme.colors.mainPurple};
-  background-color: ${(props) => props.theme.colors.bgBlue};
-  width: 5vw;
-  text-align: center;
-  box-shadow: -3px 3px 0px ${(props) => props.theme.colors.mainPurple};
-  transition: all 0.1s linear;
-  cursor: url(${Cursor}), auto;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid ${(props) => props.theme.colors.mainPurple};
-  margin-bottom: 10px;
-  &:hover {
-    box-shadow: -1px 1px 0px ${(props) => props.theme.colors.mainPurple};
-  }
+  @media (min-width: 0px) {
+    text-align: center;
+    font-family: "logo";
+    color: ${(props) => props.theme.colors.mainPurple};
+    border-right: 3px solid ${(props) => props.theme.colors.mainPurple};
+    background-color: ${(props) => props.theme.colors.bgBlue};
+    width: 25%;
+    height: 20vw;
 
-  &:active {
-    box-shadow: 0px 0px 0px ${(props) => props.theme.colors.mainPurple};
-  }
+    &:nth-child(1) {
+      border-left: 3px solid ${(props) => props.theme.colors.mainPurple};
+    }
 
-  p {
-    margin: 0;
+    &:active {
+      background-color: ${(props) => props.theme.colors.bgYellow};
+    }
+  }
+  @media (min-width: 800px) {
+    text-decoration: none;
+    padding: 5px 10px 3px 10px;
+    border-radius: 0px;
+    border: 1px solid ${(props) => props.theme.colors.mainPurple};
+    height: auto;
+    width: 5vw;
+
+    box-shadow: -3px 3px 0px ${(props) => props.theme.colors.mainPurple};
+    transition: all 0.1s linear;
+    cursor: url(${Cursor}), auto;
     position: relative;
-    z-index: 2;
-    pointer-events: none;
-  }
+    overflow: hidden;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: orange;
-    top: 300%;
-    left: 0;
-    z-index: 1;
-    transition: all 0.3s linear;
-    transform: skewY(40deg);
-  }
+    margin-bottom: 10px;
+    &:hover {
+      box-shadow: -1px 1px 0px ${(props) => props.theme.colors.mainPurple};
+    }
 
-  &:hover::after {
-    top: 0;
-    transform: rotate(0deg);
-  }
+    &:active {
+      box-shadow: 0px 0px 0px ${(props) => props.theme.colors.mainPurple};
+    }
 
-  /* -webkit-text-stroke: 1px ${(props) => props.theme.colors.mainPurple}; */
+    p {
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: orange;
+      top: 300%;
+      left: 0;
+      z-index: 1;
+      transition: all 0.3s linear;
+      transform: skewY(40deg);
+    }
+
+    &:hover::after {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
 `;
 
 const Navbar = () => {
   const context = useContext(Context);
+  const W = window.innerWidth;
+
   const {
     setIsAbout,
     setIsSkills,
@@ -109,30 +142,32 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (isAbout) {
-      tl.to(
-        "#nav",
-        { x: "-30vw", ease: "elastic.out(0.9, 1)" },
-        { duration: 1.9 }
-      );
-    } else if (isSkills) {
-      tl.to(
-        "#nav",
-        { x: "25vw", ease: "elastic.out(0.9, 1)" },
-        { duration: 1.9 }
-      );
-    } else if (isWorks) {
-      tl.to(
-        "#nav",
-        { x: "32vw", ease: "elastic.out(0.9, 1)" },
-        { duration: 1.9 }
-      );
-    } else {
-      tl.to(
-        "#nav",
-        { x: "0vw", ease: "elastic.out(0.9, 1)" },
-        { duration: 1.9 }
-      );
+    if (W > 800) {
+      if (isAbout) {
+        tl.to(
+          "#nav",
+          { x: "-30vw", ease: "elastic.out(0.9, 1)" },
+          { duration: 1.9 }
+        );
+      } else if (isSkills) {
+        tl.to(
+          "#nav",
+          { x: "25vw", ease: "elastic.out(0.9, 1)" },
+          { duration: 1.9 }
+        );
+      } else if (isWorks) {
+        tl.to(
+          "#nav",
+          { x: "32vw", ease: "elastic.out(0.9, 1)" },
+          { duration: 1.9 }
+        );
+      } else {
+        tl.to(
+          "#nav",
+          { x: "0vw", ease: "elastic.out(0.9, 1)" },
+          { duration: 1.9 }
+        );
+      }
     }
   }, [isAbout, isSkills, isWorks]);
   return (

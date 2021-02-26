@@ -27,7 +27,7 @@ const Container = (props) => {
       list: ["MongoDB", "Firebase Realtime Database"],
     },
     {
-      title: "Frameworks",
+      title: "JS Frameworks",
       list: ["React.js", "React Native", "Node.js", "Express.js"],
     },
 
@@ -40,7 +40,7 @@ const Container = (props) => {
       ],
     },
     {
-      title: "Diverse",
+      title: "More Frameworks",
       list: [
         "Redux & Thunk",
         "SASS",
