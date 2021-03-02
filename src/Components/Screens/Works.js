@@ -19,6 +19,7 @@ const Works = (props) => {
             tech={item.tech}
             form={item.form}
             url={item.url}
+            info={item.info}
           />
         );
       })}

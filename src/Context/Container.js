@@ -18,26 +18,14 @@ const Container = (props) => {
       tasks: ["Planing", "Design", "Programming"],
       images: `${img01}`,
       url: "https://kh-version2.vercel.app/feed",
+      info: "Booking Agency",
     },
   ];
   const SkillsList = [
     { title: "Programming Languages", list: ["HTML", "CSS", "JAVASCRIPT"] },
     {
-      title: "Database & Cloud",
-      list: ["MongoDB", "Firebase Realtime Database"],
-    },
-    {
       title: "JS Frameworks",
       list: ["React.js", "React Native", "Node.js", "Express.js"],
-    },
-
-    {
-      title: "Additional",
-      list: [
-        "Agile Methodoligies (Scrum & Kanban)",
-        "Adobe Illustrator",
-        "Adobe Photoshop",
-      ],
     },
     {
       title: "More Frameworks",
@@ -47,6 +35,18 @@ const Container = (props) => {
         "Material UI",
         "Styled Components",
         "Gsap Animation",
+      ],
+    },
+    {
+      title: "Database & Cloud",
+      list: ["MongoDB", "Firebase Realtime Database"],
+    },
+    {
+      title: "Additional",
+      list: [
+        "Agile Methodoligies (Scrum & Kanban)",
+        "Adobe Illustrator",
+        "Adobe Photoshop",
       ],
     },
   ];

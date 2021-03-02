@@ -6,15 +6,25 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: ${(props) => props.theme.colors.bgBlue};
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 5vw;
-    background-color: pink;
-    border-left: 3px solid ${(props) => props.theme.colors.mainPurple};
-    border-right: 3px solid ${(props) => props.theme.colors.mainPurple};
-    border: 10px solid ${(props) => props.theme.colors.mainPurple};
+    padding: 5vw 5vw 25vw 5vw;
+    background-color: ${(props) => props.theme.colors.bgPink};
+
+    .control {
+      display: flex;
+      align-items: center;
+      height: 15vh;
+      width: 80%;
+      justify-content: center;
+      position: absolute;
+      bottom: 0vw;
+      left: 5%;
+      /* bottom: 0.1vh; */
+      transform: translate(0%);
+    }
+
     .paginationCont {
       display: flex;
       flex-direction: row;
@@ -36,23 +46,12 @@ const Wrapper = styled.div`
       border: 1px solid ${(props) => props.theme.colors.mainPurple};
       margin: 0.5vw;
     }
-    .control {
-      display: flex;
-      align-items: center;
-      height: 15vh;
-      width: 100%;
-      justify-content: center;
-      position: fixed;
-      bottom: 15vh;
-      left: 50%;
-      transform: translate(-50%);
-    }
+
     button {
       background: none;
       border: none;
       outline: none;
       color: ${(props) => props.theme.colors.mainPurple};
-
       &:active {
         color: ${(props) => props.theme.colors.bgYellow};
       }
@@ -62,14 +61,29 @@ const Wrapper = styled.div`
     width: 61vw;
     height: 100vh;
     margin-left: -5vw;
-    padding: 0 5vw;
+    padding: 0vw;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    position: absolute;
+    position: relative;
     font-family: "logo";
     font-size: 3vw;
     border: none;
+    background-color: transparent;
+
+    .control {
+      display: flex;
+      align-items: center;
+      height: auto;
+      width: auto;
+      justify-content: center;
+      position: relative;
+      bottom: 0vh;
+      left: 0%;
+      margin-top: 1vw;
+      transform: translate(0%);
+    }
+
     .paginationCont {
       display: flex;
     }

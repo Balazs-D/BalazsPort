@@ -16,10 +16,13 @@ const Logo = () => {
     setIsAbout,
     setIsSkills,
     setIsWorks,
+    setIsContact,
   } = context;
   const goHome = () => {
     setIsAbout(false);
     setIsSkills(false);
+    setIsContact(false);
+    setIsWorks(false);
   };
 
   useEffect(() => {
@@ -27,25 +30,25 @@ const Logo = () => {
       if (isAbout) {
         tl.to(
           "#logo",
-          { x: "-30vw", ease: "elastic.out(0.9, 1)" },
+          { x: "10vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else if (isSkills) {
         tl.to(
           "#logo",
-          { x: "25vw", ease: "elastic.out(0.9, 1)" },
+          { x: "65vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else if (isWorks) {
         tl.to(
           "#logo",
-          { x: "32vw", ease: "elastic.out(0.9, 1)" },
+          { x: "70vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else {
         tl.to(
           "#logo",
-          { x: "0vw", ease: "elastic.out(0.9, 1)" },
+          { x: "37vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       }

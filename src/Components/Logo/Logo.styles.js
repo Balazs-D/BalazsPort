@@ -5,6 +5,8 @@ const WrapperCont = styled.div`
   @media (min-width: 0px) {
     font-family: "logo";
     position: absolute;
+    top: 0;
+    left: 5vw;
     margin-top: 7vw;
     display: flex;
     flex-direction: column;
@@ -20,15 +22,28 @@ const WrapperCont = styled.div`
     }
     h1 {
       width: auto;
-      font-size: 9vw;
+      max-width: 95%;
+      font-size: 8.5vw;
       margin: 0;
       border: 2px solid ${(props) => props.theme.colors.mainPurple};
       margin-bottom: 1vw;
       padding: 10px 10px 2px 12px;
       color: ${(props) => props.theme.colors.bgPurple};
       background-color: ${(props) => props.theme.colors.bgBlue};
-      box-shadow: -5px 5px 0px ${(props) => props.theme.colors.mainPurple};
+      filter: drop-shadow(
+        -5px 5px 0px ${(props) => props.theme.colors.mainPurple}
+      );
       transition: all 0.1s linear;
+
+      &::after {
+        content: "BALAZS DANYADI";
+        position: absolute;
+        left: 15px;
+        top: 11px;
+        color: transparent;
+        -webkit-text-stroke: 1px ${(props) => props.theme.colors.mainPurple};
+        transition: all 0.1s linear;
+      }
     }
 
     h3 {
@@ -39,10 +54,9 @@ const WrapperCont = styled.div`
       margin-bottom: 1vw;
       padding: 10px 10px 7px 10px;
       color: ${(props) => props.theme.colors.bgPurple};
-      box-shadow: -5px 5px 0px ${(props) => props.theme.colors.mainPurple};
-      /* position: absolute;
-      left: 50%;
-      transform: translate(-50%); */
+      filter: drop-shadow(
+        -5px 5px 0px ${(props) => props.theme.colors.mainPurple}
+      );
       background-color: ${(props) => props.theme.colors.bgBlue};
       transition: all 0.1s linear;
     }
@@ -60,13 +74,16 @@ const WrapperCont = styled.div`
       padding: 10px 10px 2px 12px;
       transition: all 0.1s linear;
 
-      &:hover {
-        box-shadow: 5px -5px 0px ${(props) => props.theme.colors.mainPurple};
-      }
-
       &:hover:after {
         left: 11px;
         top: 15px;
+      }
+
+      &:hover {
+        filter: drop-shadow(
+            5px -5px 0px ${(props) => props.theme.colors.mainPurple}
+          )
+          hue-rotate(300deg);
       }
 
       &::after {
@@ -88,15 +105,15 @@ const WrapperCont = styled.div`
       margin-bottom: 1vw;
       padding: 10px 10px 7px 10px;
       color: ${(props) => props.theme.colors.bgPurple};
-      box-shadow: -5px 5px 0px ${(props) => props.theme.colors.mainPurple};
-      /* position: absolute; */
-      /* left: 50%;
-      transform: translate(-50%); */
+
       background-color: ${(props) => props.theme.colors.bgBlue};
       transition: all 0.1s linear;
 
       &:hover {
-        box-shadow: 5px -5px 0px ${(props) => props.theme.colors.mainPurple};
+        filter: drop-shadow(
+            5px -5px 0px ${(props) => props.theme.colors.mainPurple}
+          )
+          hue-rotate(100deg);
       }
     }
   }

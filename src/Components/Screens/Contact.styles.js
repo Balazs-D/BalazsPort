@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Cursor from "../../Graphics/1x/pointer.png";
 
 const ContactWrapper = styled.div`
   @media (min-width: 0px) {
@@ -9,21 +10,24 @@ const ContactWrapper = styled.div`
     bottom: 0vw;
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    left: 0;
 
     div {
       width: 100vw;
-      height: 40%;
+      height: 45%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-end;
       align-items: center;
+      margin-bottom: 5vw;
 
-      span {
+      a {
         color: ${(props) => props.theme.colors.mainPurple};
         border: 2px solid ${(props) => props.theme.colors.mainPurple};
         box-shadow: -5px 5px ${(props) => props.theme.colors.mainPurple};
-        padding: 1vw;
+        background-color: ${(props) => props.theme.colors.bgBlue};
+        padding: 2vw;
         width: 60%;
         flex-direction: column;
         display: flex;
@@ -31,10 +35,12 @@ const ContactWrapper = styled.div`
         justify-content: flex-start;
         align-items: center;
         font-family: "text";
-
+        text-decoration: none;
         transition: all 0.1s linear;
-        margin: 0 4vw;
+        margin: 3vw 4vw;
         font-size: 4vw;
+        text-shadow: 1px 1px ${(props) => props.theme.colors.bgYellow},
+          -1px -1px ${(props) => props.theme.colors.bgPurple};
 
         p {
           font-size: 10vw;
@@ -43,37 +49,46 @@ const ContactWrapper = styled.div`
           width: 100%;
         }
 
-        &:hover {
-          box-shadow: 5px -5px ${(props) => props.theme.colors.dark};
-          color: ${(props) => props.theme.colors.dark};
-          border: 2px solid ${(props) => props.theme.colors.dark};
+        &:active {
+          box-shadow: 0px 0px ${(props) => props.theme.colors.dark};
         }
       }
     }
   }
   @media (min-width: 800px) {
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0vw;
-    transform: rotate(0deg);
+
+    transform: translateY(100%);
     border-top: 10px solid ${(props) => props.theme.colors.mainPurple};
     border-bottom: 10px solid ${(props) => props.theme.colors.mainPurple};
 
     div {
-      width: 40vw;
+      width: 60vw;
       height: auto;
       transform: translateY(20%);
       flex-direction: row;
-      span {
+      margin: 0;
+      a {
         font-size: 1.1vw;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 200px;
+        cursor: url(${Cursor}), auto;
+        &:hover {
+          box-shadow: 5px -5px ${(props) => props.theme.colors.dark};
+          color: ${(props) => props.theme.colors.dark};
+          border: 2px solid ${(props) => props.theme.colors.dark};
+          text-shadow: 0px 0px ${(props) => props.theme.colors.bgYellow},
+            0px 0px ${(props) => props.theme.colors.bgPurple};
+          background-color: ${(props) => props.theme.colors.bgPink};
+        }
 
         p {
           font-size: 1.3vw;

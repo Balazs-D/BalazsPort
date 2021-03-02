@@ -11,13 +11,15 @@ const NavCont = styled.ul`
     align-items: center;
     list-style: none;
     position: absolute;
-    bottom: 0vw;
+    top: 40vw;
+    left: 0;
     margin: 0;
     padding: 0;
-    border-top: 10px solid ${(props) => props.theme.colors.mainPurple};
+    border-top: 3px solid ${(props) => props.theme.colors.mainPurple};
+    border-bottom: 3px solid ${(props) => props.theme.colors.mainPurple};
   }
   @media (min-width: 800px) {
-    border-top: none;
+    border: none;
     width: 30vw;
     height: 20vh;
     display: flex;
@@ -38,16 +40,21 @@ const Li = styled.li`
     font-family: "logo";
     color: ${(props) => props.theme.colors.mainPurple};
     border-right: 3px solid ${(props) => props.theme.colors.mainPurple};
-    background-color: ${(props) => props.theme.colors.bgBlue};
+    background-color: ${(props) => props.theme.colors.bgYellow};
     width: 25%;
-    height: 20vw;
+    height: auto;
+    font-size: 4.5vw;
 
-    &:nth-child(1) {
-      border-left: 3px solid ${(props) => props.theme.colors.mainPurple};
+    &:nth-child(4) {
+      border-right: none;
+      /* border-left: 3px solid ${(props) => props.theme.colors.mainPurple}; */
     }
 
     &:active {
       background-color: ${(props) => props.theme.colors.bgYellow};
+    }
+    p {
+      pointer-events: none;
     }
   }
   @media (min-width: 800px) {
@@ -55,8 +62,10 @@ const Li = styled.li`
     padding: 5px 10px 3px 10px;
     border-radius: 0px;
     border: 1px solid ${(props) => props.theme.colors.mainPurple};
+    /* transform: translate(0%); */
     height: auto;
     width: 5vw;
+    font-size: 1vw;
 
     box-shadow: -3px 3px 0px ${(props) => props.theme.colors.mainPurple};
     transition: all 0.1s linear;
@@ -65,6 +74,11 @@ const Li = styled.li`
     overflow: hidden;
 
     margin-bottom: 10px;
+
+    &:nth-child(4) {
+      border-right: 1px solid ${(props) => props.theme.colors.mainPurple};
+      /* border-left: 3px solid ${(props) => props.theme.colors.mainPurple}; */
+    }
     &:hover {
       box-shadow: -1px 1px 0px ${(props) => props.theme.colors.mainPurple};
     }
@@ -146,25 +160,25 @@ const Navbar = () => {
       if (isAbout) {
         tl.to(
           "#nav",
-          { x: "-30vw", ease: "elastic.out(0.9, 1)" },
+          { x: "8vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else if (isSkills) {
         tl.to(
           "#nav",
-          { x: "25vw", ease: "elastic.out(0.9, 1)" },
+          { x: "64vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else if (isWorks) {
         tl.to(
           "#nav",
-          { x: "32vw", ease: "elastic.out(0.9, 1)" },
+          { x: "69vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       } else {
         tl.to(
           "#nav",
-          { x: "0vw", ease: "elastic.out(0.9, 1)" },
+          { x: "35vw", ease: "elastic.out(0.9, 1)" },
           { duration: 1.9 }
         );
       }

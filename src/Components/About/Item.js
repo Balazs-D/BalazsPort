@@ -4,13 +4,17 @@ import styled from "styled-components";
 const CardCont = styled.div`
   @media (min-width: 0px) {
     font-family: "logo";
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 
     p {
       color: ${(props) => props.theme.colors.bgYellow};
       -webkit-text-stroke: 1px ${(props) => props.theme.colors.mainPurple};
       text-shadow: -2px 2px 0px ${(props) => props.theme.colors.mainPurple};
       font-size: 8vw;
-      margin: 5vw 0;
+      margin: 3vw 0;
+      text-align: start;
     }
   }
 
