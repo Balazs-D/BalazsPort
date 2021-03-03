@@ -8,74 +8,86 @@ import ItemTwo from "../../Graphics/SVG/i04.svg";
 import ItemThree from "../../Graphics/SVG/i05.svg";
 
 const AnimCont = styled.div`
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  visibility: visible;
-  .small {
-    filter: drop-shadow(
-      0px 0px 0px ${(props) => props.theme.colors.mainPurple}
-    );
-    transition: all 0.1s linear;
-
-    &:hover {
-      filter: drop-shadow(5px -5px 20px ${(props) => props.theme.colors.bgBlue})
-        hue-rotate(210deg);
-    }
-  }
-
-  .large {
-    filter: drop-shadow(
-      -5px 5px 0px ${(props) => props.theme.colors.mainPurple}
-    );
-    transition: all 0.1s linear;
-
-    &:hover {
+  @media (min-width: 0px) {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    display: none;
+    /* transform: translateY(50%); */
+    .small {
       filter: drop-shadow(
-          5px -5px 0px ${(props) => props.theme.colors.mainPurple}
-        )
-        hue-rotate(300deg);
+        0px 0px 0px ${(props) => props.theme.colors.mainPurple}
+      );
+      transition: all 0.1s linear;
+
+      &:hover {
+        filter: drop-shadow(
+            5px -5px 20px ${(props) => props.theme.colors.bgBlue}
+          )
+          hue-rotate(210deg);
+      }
+    }
+
+    .large {
+      filter: drop-shadow(
+        -5px 5px 0px ${(props) => props.theme.colors.mainPurple}
+      );
+      transition: all 0.1s linear;
+
+      &:hover {
+        filter: drop-shadow(
+            5px -5px 0px ${(props) => props.theme.colors.mainPurple}
+          )
+          hue-rotate(300deg);
+      }
+    }
+
+    /* Orange Triangle */
+    & :nth-child(1) {
+      width: 40%;
+      position: absolute;
+      transform: translate(-100vw) rotate(-30deg);
+    }
+    /* Pink Triangle */
+    & :nth-child(2) {
+      width: 25%;
+      position: absolute;
+      transform: translate(100vw);
+    }
+
+    /* Square Item */
+    & :nth-child(3) {
+      width: 3.5%;
+      position: absolute;
+      /* top: 16%;
+    left: 39%; */
+      transform: translate(-50vw, -50vh);
+    }
+
+    /* Snake Item */
+    & :nth-child(4) {
+      width: 8.5%;
+      position: absolute;
+      top: 18%;
+      left: 62%;
+      transform: translate(50vw, 50vh);
+    }
+
+    /* Snake Item */
+    & :nth-child(5) {
+      width: 3.5%;
+      position: absolute;
+      top: 5%;
+      left: 57%;
+      transform: translate(30vw, -50vh);
     }
   }
-
-  /* Orange Triangle */
-  & :nth-child(1) {
-    width: 40%;
+  @media (min-width: 800px) {
+    width: 100vw;
+    height: 100%;
     position: absolute;
-    transform: translate(-100vw) rotate(-30deg);
-  }
-  /* Pink Triangle */
-  & :nth-child(2) {
-    width: 25%;
-    position: absolute;
-    transform: translate(100vw);
-  }
-
-  /* Square Item */
-  & :nth-child(3) {
-    width: 3.5%;
-    position: absolute;
-    /* top: 16%;
-    left: 39%; */
-    transform: translate(-50vw, -50vh);
-  }
-
-  /* Snake Item */
-  & :nth-child(4) {
-    width: 8.5%;
-    position: absolute;
-    top: 18%;
-    left: 62%;
-    transform: translate(50vw, 50vh);
-  }
-
-  /* Snake Item */
-  & :nth-child(5) {
-    width: 3.5%;
-    position: absolute;
-    top: 5%;
-    left: 57%;
-    transform: translate(30vw, -50vh);
+    visibility: visible;
+    display: inline-block;
   }
 `;
 
