@@ -28,9 +28,9 @@ const NavCont = styled.ul`
     align-items: center;
     list-style: none;
     padding: 0;
-    margin-bottom: 12vh;
+    margin-bottom: 5vh;
     position: absolute;
-    bottom: -5vw;
+    top: 80vh;
   }
 `;
 

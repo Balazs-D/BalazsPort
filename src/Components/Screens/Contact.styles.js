@@ -64,7 +64,7 @@ const ContactWrapper = styled.div`
     align-items: center;
     position: absolute;
 
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
     border-top: 10px solid ${(props) => props.theme.colors.mainPurple};
     border-bottom: 10px solid ${(props) => props.theme.colors.mainPurple};
 
