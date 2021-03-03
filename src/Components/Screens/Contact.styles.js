@@ -66,7 +66,7 @@ const ContactWrapper = styled.div`
 
     /* transform: translateY(100%); */
     border-top: 10px solid ${(props) => props.theme.colors.mainPurple};
-    border-bottom: 10px solid ${(props) => props.theme.colors.mainPurple};
+    /* border-bottom: 10px solid ${(props) => props.theme.colors.mainPurple}; */
 
     div {
       width: 60vw;

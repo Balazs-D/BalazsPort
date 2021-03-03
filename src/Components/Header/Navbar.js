@@ -30,7 +30,7 @@ const NavCont = styled.ul`
     padding: 0;
     margin-bottom: 5vh;
     position: absolute;
-    top: 80vh;
+    top: 78vh;
   }
 `;
 
