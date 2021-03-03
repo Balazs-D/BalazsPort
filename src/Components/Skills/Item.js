@@ -246,11 +246,13 @@ const Works = (props) => {
               })}
             </div>
           </div>
-          <div className="iconCont">
-            <a href={props.url} target="about_blank">
-              <i class="far fa-arrow-alt-circle-right"></i>
-            </a>
-          </div>
+          {props.url && (
+            <div className="iconCont">
+              <a href={props.url} target="about_blank">
+                <i class="far fa-arrow-alt-circle-right"></i>
+              </a>
+            </div>
+          )}
         </CardCont>
       </GridItem>
     </Cont>

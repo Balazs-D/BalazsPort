@@ -8,6 +8,7 @@ const Works = (props) => {
   const { Works } = context;
   return (
     <WrapperWorks id={props.id}>
+      {/* <Item title="Will be updated soon..." /> */}
       {Works.map((item, i) => {
         console.log(item.images);
         return (
@@ -18,7 +19,7 @@ const Works = (props) => {
             img={item.images}
             tech={item.tech}
             form={item.form}
-            url={item.url}
+            // url={item.url}
             info={item.info}
           />
         );
