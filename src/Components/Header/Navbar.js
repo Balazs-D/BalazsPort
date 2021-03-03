@@ -30,7 +30,7 @@ const NavCont = styled.ul`
     padding: 0;
     margin-bottom: 5vh;
     position: absolute;
-    top: 35vw;
+    top: 75vh;
 
     /* bottom: 38vh; */
   }
