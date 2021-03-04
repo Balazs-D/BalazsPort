@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Cursor from "../../Graphics/1x/pointer.png";
+import Cursor from "../../Graphics/1x/link.png";
 
 const ContactWrapper = styled.div`
   @media (min-width: 0px) {
@@ -24,9 +24,9 @@ const ContactWrapper = styled.div`
 
       a {
         color: ${(props) => props.theme.colors.mainPurple};
-        border: 2px solid ${(props) => props.theme.colors.mainPurple};
-        box-shadow: -5px 5px ${(props) => props.theme.colors.mainPurple};
-        background-color: ${(props) => props.theme.colors.bgBlue};
+        border: 2px dashed ${(props) => props.theme.colors.mainPurple};
+        /* box-shadow: -5px 5px ${(props) => props.theme.colors.mainPurple}; */
+        /* background-color: ${(props) => props.theme.colors.bgBlue}; */
         padding: 2vw;
         width: 60%;
         flex-direction: column;
@@ -74,6 +74,7 @@ const ContactWrapper = styled.div`
       transform: translateY(20%);
       flex-direction: row;
       margin: 0;
+
       a {
         font-size: 1.1vw;
         flex-direction: column;
@@ -81,6 +82,7 @@ const ContactWrapper = styled.div`
         align-items: center;
         width: 200px;
         cursor: url(${Cursor}), auto;
+
         &:hover {
           box-shadow: 5px -5px ${(props) => props.theme.colors.dark};
           color: ${(props) => props.theme.colors.dark};
