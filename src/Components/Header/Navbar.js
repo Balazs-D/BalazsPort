@@ -40,7 +40,10 @@ const Li = styled.li`
   @media (min-width: 0px) {
     text-align: center;
     font-family: "logo";
-    color: ${(props) => props.theme.colors.mainPurple};
+    color: ${(props) =>
+      props.isActive
+        ? props.theme.colors.bgPurple
+        : props.theme.colors.mainPurple};
     border-right: 3px solid ${(props) => props.theme.colors.mainPurple};
     background-color: ${(props) => props.theme.colors.bgYellow};
     width: 25%;
@@ -116,7 +119,7 @@ const Li = styled.li`
   }
 `;
 
-const Navbar = () => {
+const Navbar = (props) => {
   const context = useContext(Context);
   const W = window.innerWidth;
 
@@ -186,6 +189,8 @@ const Navbar = () => {
       }
     }
   }, [isAbout, isSkills, isWorks]);
+
+  console.log(isAbout === true);
   return (
     <NavCont id="nav">
       <Li
@@ -193,6 +198,7 @@ const Navbar = () => {
         onClick={(e) => {
           handleNav(e);
         }}
+        isActive={isAbout === true}
       >
         <p>ABOUT</p>
         <div className="pop"></div>
@@ -202,6 +208,7 @@ const Navbar = () => {
         onClick={(e) => {
           handleNav(e);
         }}
+        isActive={isSkills}
       >
         <p>SKILLS</p>
         <div className="pop"></div>
@@ -211,6 +218,7 @@ const Navbar = () => {
         onClick={(e) => {
           handleNav(e);
         }}
+        isActive={isWorks}
       >
         <p>WORKS</p>
         <div className="pop"></div>
@@ -220,6 +228,7 @@ const Navbar = () => {
         onClick={(e) => {
           handleNav(e);
         }}
+        isActive={isContact}
       >
         <p>CONTACT</p>
         <div className="pop"></div>
