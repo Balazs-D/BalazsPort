@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../../Context/Context";
-import WrapperWorks from "./Works.style";
+import { Works as WrapperWorks } from "./Works.style";
+
 import Item from "../Skills/Item";
 
 const Works = (props) => {
@@ -8,9 +9,7 @@ const Works = (props) => {
   const { Works } = context;
   return (
     <WrapperWorks id={props.id}>
-      {/* <Item title="Will be updated soon..." /> */}
       {Works.map((item, i) => {
-        console.log(item.images);
         return (
           <Item
             key={i}
@@ -19,7 +18,7 @@ const Works = (props) => {
             img={item.images}
             tech={item.tech}
             form={item.form}
-            // url={item.url}
+            url={item.url}
             info={item.info}
           />
         );

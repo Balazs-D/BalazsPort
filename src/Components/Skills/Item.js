@@ -3,28 +3,35 @@ import styled from "styled-components";
 import { Context } from "../../Context/Context";
 import Grid from "@material-ui/core/Grid";
 
-import CardContent from "@material-ui/core/CardContent";
 import Link from "../../Graphics/1x/link.png";
 
-const Cont = styled(Grid)`
+const Cont = styled.div`
   @media (min-width: 0px) {
-    padding-top: 40vh;
+    /* padding-top: 5vh; */
+    width: 100%;
+    margin-bottom: 105vw;
   }
+
   @media (min-width: 800px) {
     padding: 7vw;
+    width: 8vw;
+    height: 12vw;
+    margin-top: 3vw;
+    margin-bottom: 3vh;
   }
 `;
 
-const GridItem = styled(Grid)`
+const GridItem = styled.div`
   @media (min-width: 0px) {
     color: ${(props) => props.theme.colors.mainPurple};
     display: flex;
     height: 12vw;
-    width: 100vw;
+    width: 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin: auto;
+    padding: 0;
     #workItemCol {
       display: flex;
       flex-direction: column;
@@ -80,6 +87,8 @@ const GridItem = styled(Grid)`
     justify-content: space-between;
     position: relative;
     animation: showUpCard 0.3s linear forward;
+    margin: 0;
+    padding: 0;
 
     #workItemCol {
       padding: 1vw;
@@ -103,6 +112,7 @@ const GridItem = styled(Grid)`
       flex-direction: column;
       justify-content: space-between;
       margin: 0;
+      height: 5vw;
 
       h5  {
         font-size: 1vw;
@@ -118,12 +128,17 @@ const GridItem = styled(Grid)`
 `;
 const CardCont = styled.div`
   @media (min-width: 0px) {
-    width: 80vw;
+    /* width: 80vw; */
     border: 3px solid ${(props) => props.theme.colors.mainPurple};
     box-shadow: -5px 5px 0 ${(props) => props.theme.colors.mainPurple};
     background-color: ${(props) => props.theme.colors.bgBlue};
     display: flex;
     flex-direction: column;
+
+    .imageDiv {
+      width: 80vw;
+      height: 50vw;
+    }
     .iconCont {
       display: flex;
       flex-direction: row;
@@ -154,12 +169,13 @@ const CardCont = styled.div`
       box-shadow: -0px 0px 0 ${(props) => props.theme.colors.mainPurple};
       background-color: ${(props) => props.theme.colors.bgBlue};
       margin: 0;
-      margin-left: 40vw;
+      /* margin-left: 40vw; */
       width: auto;
       transition: all 0.3s linear;
 
       .imageDiv {
         width: 18vw;
+        height: 10vw;
       }
 
       .iconCont {
@@ -215,7 +231,7 @@ const Works = (props) => {
   const W = window.innerWidth;
 
   return (
-    <Cont container xs={12}>
+    <Cont>
       <GridItem xs={12} item>
         <CardCont
           onMouseEnter={() => {
@@ -232,8 +248,12 @@ const Works = (props) => {
           <div id="workItemCol">
             <div id="titleRow">
               <h1>{props.title}</h1>
-              <h1> / </h1>
-              <h1>{props.subtitle}</h1>
+              {props.subtitle && (
+                <>
+                  <h1> / </h1>
+                  <h1>{props.subtitle}</h1>
+                </>
+              )}
             </div>
 
             <p>{props.info}</p>

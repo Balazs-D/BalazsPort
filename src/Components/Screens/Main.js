@@ -48,17 +48,17 @@ const Main = () => {
         setIsAbout(true);
         tl.to("#about", { x: "0vw" }, { duration: 1 })
           .to("#skills", { x: "-200vw" }, { duration: 1 })
-          .to("#contact", { y: "200vw" }, { duration: 1 })
+          .to("#contact", { y: "250vw" }, { duration: 1 })
           .to("#works", { x: "-220vw" }, { duration: 1 });
       } else if (isSkills) {
         tl.to("#about", { x: "-200vw" }, { duration: 0.5 })
           .to("#skills", { x: "0vw" }, { duration: 0.5 })
-          .to("#contact", { y: "200vw" }, { duration: 0.5 })
+          .to("#contact", { y: "250vw" }, { duration: 0.5 })
           .to("#works", { x: "-220vw" }, { duration: 0.5 });
       } else if (isWorks) {
         tl.to("#about", { x: "-200vw" }, { duration: 0.5 })
           .to("#skills", { x: "-200vw" }, { duration: 0.5 })
-          .to("#contact", { y: "200vw" }, { duration: 0.5 })
+          .to("#contact", { y: "250vw" }, { duration: 0.5 })
           .to("#works", { x: "0vw" }, { duration: 0.5 });
       } else if (isContact) {
         tl.to("#about", { x: "100vw" }, { duration: 0.5 })

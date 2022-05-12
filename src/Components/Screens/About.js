@@ -4,7 +4,7 @@ import Item from "../About/Item";
 
 const TextArr = [
   [
-    "I am a Berlin based",
+    "I am a Germany based",
     "frontend developer with a passion",
     "for modern web technologies.",
   ],

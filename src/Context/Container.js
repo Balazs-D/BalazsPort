@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { Context } from "./Context";
 import img01 from "../Graphics/K&H_images/01.png";
-import img02 from "../Graphics/K&H_images/02.png";
-import img03 from "../Graphics/K&H_images/03.png";
+import img02 from "../Graphics/BCT/BCT.png";
+import img03 from "../Graphics/Fastpass/fastpass.png";
 
 const Container = (props) => {
   const [isAbout, setIsAbout] = useState(false);
@@ -11,14 +11,34 @@ const Container = (props) => {
   const [isContact, setIsContact] = useState(false);
   const Works = [
     {
+      title: "FastPass",
+      subtitle: "",
+      form: "Web Application",
+      tech: ["React", "Styled Components", "Firebase Realtime Database"],
+      tasks: ["Frontend Developer", "Design", "Coding"],
+      images: `${img03}`,
+      url: "https://www.fastest-business.at/",
+      info: "Digital Covid Assitent",
+    },
+    {
       title: "K&H",
       subtitle: "Kicks & Hugs",
       form: "Responsive Website",
       tech: ["React", "Styled Components", "Firebase Realtime Database"],
       tasks: ["Planing", "Design", "Programming"],
       images: `${img01}`,
-      url: "https://kh-version2.vercel.app/feed",
+      url: "https://www.kickshugs.com/feed",
       info: "Booking Agency",
+    },
+    {
+      title: "BCT",
+      subtitle: "",
+      form: "Responsive Website",
+      tech: ["React", "Styled Components"],
+      tasks: ["Planing", "Design", "Programming"],
+      images: `${img02}`,
+      url: "https://www.banucicektulu.com/",
+      info: "Artist Page",
     },
   ];
   const SkillsList = [
@@ -44,6 +64,8 @@ const Container = (props) => {
     {
       title: "Additional",
       list: [
+        "GIT",
+        "Jira",
         "Agile Methodoligies (Scrum & Kanban)",
         "Adobe Illustrator",
         "Adobe Photoshop",
