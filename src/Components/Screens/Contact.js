@@ -1,6 +1,6 @@
 import React from "react";
 import Wrapper from "./Contact.styles";
-import CV from "../../Assets/Docs/CV.pdf";
+import CV from "../../Assets/Docs/Balazs_Danyadi _Lebenslauf.pdf";
 
 const Contact = (props) => {
   return (
