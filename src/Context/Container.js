@@ -45,7 +45,7 @@ const Container = (props) => {
     { title: "Programming Languages", list: ["HTML", "CSS", "JAVASCRIPT"] },
     {
       title: "JS Frameworks",
-      list: ["React.js", "React Native", "Node.js", "Express.js"],
+      list: [ "Vue & Nuxt", "React.js", "React Native", "Node.js", "Express.js"],
     },
     {
       title: "More Frameworks",
@@ -64,6 +64,8 @@ const Container = (props) => {
     {
       title: "Additional",
       list: [
+        "Storyblok (CMS)",
+        "Storybook",
         "GIT",
         "Jira",
         "Agile Methodoligies (Scrum & Kanban)",
