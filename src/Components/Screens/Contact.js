@@ -11,7 +11,7 @@ const Contact = (props) => {
           rel="noreferrer"
           target="_blank"
         >
-          <i class="fab fa-envelope fa-4x"></i>
+          <i class="fa-regular fa-envelope fa-4x"></i>
           <p>E-Mail</p>
         </a>
         <a
