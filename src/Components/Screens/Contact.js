@@ -7,12 +7,12 @@ const Contact = (props) => {
     <Wrapper id={props.id}>
       <div>
         <a
-          href={"https://www.linkedin.com/in/balazs-danyadi/"}
+          href={"mailto:balazs.danyadi@gmail.com"}
           rel="noreferrer"
           target="_blank"
         >
-          <i class="fab fa-linkedin fa-4x"></i>
-          <p>LinkedIn</p>
+          <i class="fab fa-envelope-open-text fa-4x"></i>
+          <p>E-Mail</p>
         </a>
         <a
           href={"https://github.com/Balazs-D"}
